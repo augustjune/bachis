@@ -19,7 +19,7 @@
 ### Comparison of existing solutions
 
 
-# What is my solution to given problem?
+# What is my solution to a given problem?
 
 ## Idea
 ### Arbitrary representation of an individual
