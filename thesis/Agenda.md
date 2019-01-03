@@ -1,8 +1,8 @@
-# What is the problem and why is it worth solving?
+# [What is the problem and why is it worth solving?](1/1.md)
 
 ## What is evolutionary algorithm?
 ### How evolutionary algorithms are used nowadays?
-### What are the types of evolutionary algorithms?
+### What are the types of evolutionary algorithms? Quick overview.
 
 ## Their advantages and disadvantages.
 
