@@ -9,7 +9,7 @@
 ## How it is possible to resolve the existing issues with applying genetic algorithms?
 
 
-# Existing solutions
+# [Existing solutions](2/2.md)
 
 ## How one can find a solution?
 
