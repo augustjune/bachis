@@ -19,17 +19,21 @@
 ### Comparison of existing solutions
 
 
-# What is my solution to a given problem?
+# [What is my solution to a given problem?](3/3.md)
 
 ## Idea
-### Arbitrary representation of an individual
-### Parallelization
+### Key aspects 
+
+#### Arbitrary representation of an individual
+#### Parallelization
 
 ## Technologies which are used
 ### Scala programming language
 ### Local parallelization (Scala parallel collections)
 ### Distributed computation (Apache Spark)
 ### Reactive streams (Akka)
+
+## Implementation overview
 
 
 ## Implementation overview
