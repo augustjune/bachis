@@ -22,25 +22,28 @@
 # [What is my solution to a given problem?](3/3.md)
 
 ## Idea
-### Key aspects 
 
-#### Arbitrary representation of an individual
-#### Parallelization
+### Key concepts 
 
-## Technologies which are used
-### Scala programming language
-### Local parallelization (Scala parallel collections)
-### Distributed computation (Apache Spark)
-### Reactive streams (Akka)
+#### Arbitrary representation of individual
+#### Local and distributed parallelization
+#### Large size of the population
+#### Unlimited evolution
+#### Flexible evolution flow
 
 ## Implementation overview
 
+### Technology stack
+### Major features
 
-## Implementation overview
-### Modular architecture
-### Functional programming
-### Decoupling disigning from computation
-### High flexibility
+## Usage
+
+### Requirements
+### API
+### Preimplemented algorithms
+
+## Examples
+
 
 # How can I enhance this solution?
 
