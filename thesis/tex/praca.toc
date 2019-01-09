@@ -1,0 +1,19 @@
+\contentsline {chapter}{Spis rysunk\'ow}{2}{chapter*.2}
+\contentsline {chapter}{Spis listing\IeC {\'o}w}{3}{chapter*.3}
+\contentsline {chapter}{Spis tabel}{4}{chapter*.4}
+\contentsline {chapter}{\numberline {1\relax .\kern .5em }Introduction}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2\relax .\kern .5em }Background}{6}{chapter.2}
+\contentsline {chapter}{\numberline {3\relax .\kern .5em }Existing solutions overview}{7}{chapter.3}
+\contentsline {chapter}{\numberline {4\relax .\kern .5em }What is my solution to a given problem?}{8}{chapter.4}
+\contentsline {section}{\numberline {4.1\relax .\kern .5em }Idea}{8}{section.4.1}
+\contentsline {section}{\numberline {4.2\relax .\kern .5em }Key concepts}{8}{section.4.2}
+\contentsline {section}{\numberline {4.3\relax .\kern .5em }Implementation overview}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1\relax .\kern .5em }Technology stack}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2\relax .\kern .5em }Core components}{15}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4\relax .\kern .5em }Usage}{18}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1\relax .\kern .5em }Requirements}{18}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2\relax .\kern .5em }API}{18}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3\relax .\kern .5em }Preimplemented algorithms}{18}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4\relax .\kern .5em }Evolution interruption}{18}{subsection.4.4.4}
+\contentsline {chapter}{\numberline {5\relax .\kern .5em }Future work}{19}{chapter.5}
+\contentsline {chapter}{Bibliografia}{20}{chapter*.8}

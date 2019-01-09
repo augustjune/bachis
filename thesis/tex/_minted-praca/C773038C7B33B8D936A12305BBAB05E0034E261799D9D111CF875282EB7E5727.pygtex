@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{k}{def} \PYG{n+nf}{modify5}\PYG{p}{(}\PYG{n}{i}\PYG{p}{:} \PYG{n}{I}\PYG{p}{)} \PYG{o}{=} \PYG{n}{modify}\PYG{p}{(}\PYG{n}{modify}\PYG{p}{(}\PYG{n}{modify}\PYG{p}{(}\PYG{n}{modify}\PYG{p}{(}\PYG{n}{modify}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)))))}
+	\PYG{n}{modify5}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)} \PYG{o}{!=} \PYG{n}{modify5}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}
+\end{Verbatim}

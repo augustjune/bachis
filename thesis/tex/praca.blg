@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: praca.aux
+The style file: dyplom.bst
+Database file #1: literatura.bib
+You've used 3 entries,
+            2662 wiz_defined-function locations,
+            584 strings with 4984 characters,
+and the built_in function-call counts, 1071 in all, are:
+= -- 64
+> -- 51
+< -- 0
++ -- 21
+- -- 18
+* -- 75
+:= -- 151
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 18
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 84
+empty$ -- 102
+format.name$ -- 21
+if$ -- 219
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 25
+newline$ -- 12
+num.names$ -- 6
+pop$ -- 52
+preamble$ -- 1
+purify$ -- 15
+quote$ -- 0
+skip$ -- 21
+stack$ -- 0
+substring$ -- 15
+swap$ -- 45
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 6
+width$ -- 4
+write$ -- 25

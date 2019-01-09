@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{learning_spark}
+Karau, H., Konwinski, A., Wendell, P., Zaharia, M., \emph{Learning Spark:
+  Lightning-Fast Big Data Analytics}, 1st wyd. (O'Reilly Media, Inc., 2015).
+
+\bibitem{programming_in_scala}
+Odersky, M., Spoon, L., Venners, B., \emph{Programming in Scala: Updated for
+  Scala 2.12}, 3rd wyd. (Artima Incorporation, USA, 2016).
+
+\bibitem{scala_parallel_collections_overview}
+Prokopec, A., Miller, H., \emph{Parallel collections overview},
+  \url{https://docs.scala-lang.org/overviews/parallel-collections/overview.html}.
+
+\end{thebibliography}

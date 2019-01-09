@@ -1,0 +1,12 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1.}{\ignorespaces The components of a distributed Spark application \cite {learning_spark}.}}{14}{figure.4.1}
+\contentsline {figure}{\numberline {4.2.}{\ignorespaces Persistence levels from org.apache.spark.storage.StorageLevel and pyspark.StorageLevel \cite {learning_spark}.}}{14}{figure.4.2}
+\contentsline {figure}{\numberline {4.3.}{\ignorespaces A typical stream flow}}{15}{figure.4.3}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

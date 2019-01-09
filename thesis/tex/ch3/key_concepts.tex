@@ -1,0 +1,47 @@
+\section{Key concepts}
+
+As mentioned previously, there already are genetic algorithms implementations available in open-source, which may satisfy some needs, but still offer too small to be universal solution and base on the architectures, which don't enable some crucial enhancements. For the tool to be better than existing ones, it has to be built upon the concepts which meet the needs of a broader range of scientists and developers, as well as provide more comfortable user experience, by reducing boilerplate, lowering entry-level and grant united environment.
+
+\begin{enumerate} 
+\item
+\textbf{Arbitrary representation of individual}
+
+There is a wide set of problems which might be resolved using genetic algorithms. Still, this optimization technique is rarely used in business applications and mainly considered as a theoretical solution. One of the reasons for such phenomenon is the difficulty which comes with a try to use genetic algorithm optimization without a previous plan to do so. The process of reshaping the existing codebase in such way, so typical genetic algorithm could be applying often demands big costs and high level of understanding GA workflow and its possibilities.
+
+Depending on the problem a user is trying to solve, a standard representation of each candidate solution would be an array of bits, integers or real numbers. The main property that makes these genetic representations convenient is that their parts are easily aligned due to their fixed size, which facilitates simple crossover operations. For the purposes of genetic programming and evolutionary programming tree-like and graph-form representation are used respectively, which causes the necessity in different implementations for each problem.
+
+A solution to this problem is an implementation of the genetic algorithm, which is able to work on generic types, which represents a candidate solution for the applied problem. Due to this property, it is possible to reuse the implementation for different problems and create a generic tool, which is decoupled from the problem it is applied to.
+\\
+
+\item
+\textbf{Local and distributed parallelization}
+
+Genetic algorithms are generally known as a time-consuming technique, as it is often used with complex, high-dimensional problems. Evolution cycle may take up to hours and days of continuous computing, depending on the parameters of the algorithm and hardware in use, which comes with a great cost and very low flexibility, as with every mistake or change was done to algorithm implementation, evolution needs to be re-executed. On the other hand, even small upgrades in speed may result as a major cost cut.
+
+For this reason, it is highly important to use the maximum of the given resources, avoiding unreasonable workloads. It may be achieved through the computation parallelization between multiple virtual CPU cores within a single machine and distributing computation in a cluster of working nodes. For the better result, two approaches may be combined and used together.
+\\
+
+\item 
+\textbf{Large size of the population}
+
+The important parameter of the genetic algorithm is population size. It controls how many individuals are going to be processed by algorithm during one evolution step. When applying to a problem with a wide range of possible solutions the *algorithm tends to find the optimal solution faster, while operating on a large number of candidates at once*. It makes every population more diverse, which leads to faster identification of better candidate and also allows to cover more subsets of function arguments at the beginning of the evolution process.
+
+A typical limitation of the number of objects one can use at a time is the capacity of RAM space. Working with large sets of data, while keeping them in memory like collections in Java or any other programming languages, may lead to exceeding the capabilities of the hardware, resulting in a crash of application or undefined behavior. In order not to limit the users, in their options it must be possible to store the parts or whole population on disk (which usually is more spacious than RAM), while processing the population in parts, which may be safely stored in faster RAM. The choice of the way, how the algorithm will store its intermediate data should be open to the end users, enabling them to make a decision upon their own preferences, which may be connected to the existing software and hardware. These parameters will be different among different applications the tool is used for, so both options, as well as their combination, have to available ``out of the box''.
+\\
+
+\item 
+\textbf{On-demand evolution}
+
+Genetic algorithm optimization is generally used for finding the best solution for a defined problem, which is the fittest candidate to the provided fitness function. It means, that the best solution is defined relative to all the solutions assigned earlier and cannot be proved as the optimal one, even when it is. But when applying to a nontrivial problem, finding the optimal solution is not always cost-effective, as it may take up to exponential time. For this reason, it is common to compute a 'good enough' solution in reasonable time. Depending on the business reasons, this time varies so sometimes it is possible to wait until the better solution is computed and sometimes it is not. For instance, if the application which uses genetic algorithm has a real-time interface and its user is interested in gaining a solution for the particular case in the range of seconds, it is justifiable to provide a solution which may not be optimal but is close to it.
+
+On the other hand, when a user is ready to allow the application to take its time in order to provide a better result, it has to still be possible to resume the evolution. Again the application should not limit users in such important cases, as the end user needs may vary depending on different circumstances, which may not be predicted in advance. The evolution of a solution to a given problem should be available on-demand, without forcing unreasonable resource uses, and adjust to a specific case as much as possible.
+\\
+
+\item
+\textbf{Flexible evolution flow}
+
+Genetic algorithm workflow depends on many parameters as well as provided genetic operators (selection, crossover, mutation). Each one of them decides how the computation will be processed, for how long, how many values will be tested, how the solution candidates will be compared between each other etc. These parameters should be wisely chosen, according to the specification of the problem, which genetic algorithm is applied to. But even within the same environment, the set of settings should be changed multiple times in order to achieve the best result in the shortest time frame. Improving the fitness function during the evolution process and adjusting the size of a population depending on the average number of unque individuals may serve as examples of self-improving performed by a genetic algorithm on the fly. Such kind of real-time modifications is often an advanced part of the implementation, which demands a deep understanding of the domain. As a workaround, sometimes the same effect is attempted to be achieved by a combination of multiple genetic algorithms, each with a different configuration, combined in a pipeline, where the result of a predecessor serves as a starting point for a successor. Still, this solution rarely allows achieving the same result, as each stage of the pipeline serves as a standalone processing workflow.
+
+The ability to change its configuration during the process is complicated, but still an important feature, which enables to use GA implementation for complex practical problems.
+
+\end{enumerate}
