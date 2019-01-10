@@ -13,6 +13,11 @@ Karau, H., Konwinski, A., Wendell, P., Zaharia, M., \emph{Learning Spark:
 Odersky, M., Spoon, L., Venners, B., \emph{Programming in Scala: Updated for
   Scala 2.12}, 3rd wyd. (Artima Incorporation, USA, 2016).
 
+\bibitem{hash_tries}
+Prokopec, A., Bronson, N.G., Bagwell, P., Odersky, M., \emph{Concurrent tries
+  with efficient non-blocking snapshots}, SIGPLAN Not. 2012, tom~47, 8, str.
+  151--160.
+
 \bibitem{scala_parallel_collections_overview}
 Prokopec, A., Miller, H., \emph{Parallel collections overview},
   \url{https://docs.scala-lang.org/overviews/parallel-collections/overview.html}.

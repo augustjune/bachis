@@ -51,7 +51,7 @@ This platform was chosen, because of its popularity and open nature. Java virtua
 The implementation of the tool has to be open to its users, allowing to view and expand source code to the specific needs. 
 \medbreak
 
-\item \textbf{Modular architecture}
+\item \label{nfreq:modul}\textbf{Modular architecture}
 
 The architecture solution used to build the tool has contain modularity among its fundamentals. This means, that allowing different features, its components have to be grouped according to their functions, so the users, who are interested in a small part of provided functionality wouldn't be forced to use all capabilities of the tool.
 
@@ -59,32 +59,32 @@ The architecture solution used to build the tool has contain modularity among it
 
 \subsection{Functional requirements}
 \begin{enumerate}
-\item \textbf{Limiting the evolution in terms of time and/or number of iterations}
+\item \label{freq:stop} \textbf{Limiting the evolution in terms of time and/or number of iterations}
 This is basic requirement for every genetic algorithm implementation. Evolution process takes time and in order to benefit from it, user must have access to the evolved version of population. Number of iterations corresponds to the number of evolution cycles performed on the population, when every genetic operator is applyed to it. On the other hand, the actual time of the evolution may be changed even in terms of the same number of iterations, as it strongly depends on performance of genetic operators and fitness function, so in some cases time may be the only valid criterion, which decides that evolution process should be stopped. 
 \medbreak
 
-\item \textbf{Controll of the best individual through evolution}
+\item \label{freq:best} \textbf{Controll of the best individual through evolution}
 
 During the evolution process, due to the chosen selection, crossover or mutation strategies, even the fittest individual may not end in the next population. As for business needs it is important to get the best solution ever discovered by algorithm, it is important to store reference to that candidate separately.
 \medbreak
 
-\item \textbf{Fitness values caching}
+\item \label{freq:cache} \textbf{Fitness values caching}
 In genetic algorithms, the computation of the fitenss function provides the largest computational load for the algorithm. Each population genration is composed of individuals who are formed from previous gneeration via cloning, crossover, or mutation. It is also common for the individual to migrate to the next population without a change or, less common, a crossover of two different individuals may produce a genotype that already has been discovered earlier. If this occurres rather frequently, it is unprofitable to compute the fitness value all over again. As a solution one may consider caching the results of fitness computation for later reusage. Although it noticeably increases the speed of algorithm, the cache tends to grow dramatically, so the coise of data structure for this purposes is extrimely important. 
 \medbreak
 
-\item \textbf{Parallel evolution processing}
+\item \label{freq:par} \textbf{Parallel evolution processing}
 
 Genetic algorithms are generally known as a time-consuming technique, as it is often used with complex, high-dimensional problems. Evolution cycle may take up to hours and days of continuous computing, depending on the parameters of the algorithm and hardware in use, which comes with a great cost and very low flexibility, as with every mistake or change was done to algorithm implementation, evolution needs to be re-executed. On the other hand, even small upgrades in speed may result as a major cost cut.
 
 For this reason, it is highly important to use the maximum of the given resources, avoiding unreasonable workloads. It may be achieved through the computation parallelization between multiple virtual CPU cores within a single machine
 \medbreak
 
-\item \textbf{Asynchronous evaluation of fitness value}
+\item \label{freq:async} \textbf{Asynchronous evaluation of fitness value}
 
 The solution must allow to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This type of environment also fits perfectly to cloud computing solutions, as fitness evaluation is entirely isolated from the rest of application.
 \medbreak
 
-\item \textbf{Generic representation of individual}
+\item \label{freq:generic} \textbf{Generic representation of individual}
 
 There is a wide set of problems which might be resolved using genetic algorithms. Still, this optimization technique is rarely used in business applications and mainly considered as a theoretical solution. One of the reasons for such phenomenon is the difficulty which comes with a try to use genetic algorithm optimization without a previous plan to do so. The process of reshaping the existing codebase in such way, so typical genetic algorithm could be applying often demands big costs and high level of understanding GA workflow and its possibilities.
 
@@ -93,12 +93,12 @@ Depending on the problem a user is trying to solve, a standard representation of
 A solution to this problem is an implementation of the genetic algorithm, which is able to work on generic types, which represents a candidate solution for the applied problem. Due to this property, it is possible to reuse the implementation for different problems and create a generic tool, which is decoupled from the problem it is applied to.
 \medbreak
 
-\item \textbf{Evolution in distributed environment}
+\item \label{freq:distributed} \textbf{Evolution in distributed environment}
 
 As already mentioned, parallelization is a big part of speed optimization for genetic algorithms. While local parallelization is usefull and convinient for medium- and small-sized problems, working with complex use cases often demands the resources, which is may not fit into one machine. Distributed environment is a next step of parallelization, when evolution process is split between different machines, each computing its own part of the workload. This approach enables horizontal scaling, when each added machine increases performance of the algorithm.  
 \medbreak
 
-\item \textbf{On-demand evolution}
+\item \label{freq:on-demand} \textbf{On-demand evolution}
 
 Genetic algorithm optimization is generally used for finding the best solution for a defined problem, which is the fittest candidate to the provided fitness function. It means, that the best solution is defined relative to all the solutions assigned earlier and cannot be proved as the optimal one, even when it is. But when applying to a nontrivial problem, finding the optimal solution is not always cost-effective, as it may take up to exponential time. For this reason, it is common to compute a 'good enough' solution in reasonable time. Depending on the business reasons, this time varies so sometimes it is possible to wait until the better solution is computed and sometimes it is not. For instance, if the application which uses genetic algorithm has a real-time interface and its user is interested in gaining a solution for the particular case in the range of seconds, it is justifiable to provide a solution which may not be optimal but is close to it.
 

@@ -78,6 +78,7 @@ Akka Streams is a library to process and transfer a sequence of elements using b
 
 \textit{ToDo: more info}
 
+
 \subsection{Core components}
 
 \textit{ToDo: add introduction}
@@ -114,22 +115,24 @@ Modification is a type class, which represents a mutation function of type \text
 
 \begin{enumerate}
 \item
-A modified instance does not equal to original one (\textit{e.i modification function does not equal to identity function})
+A modified instance does not equal to original one (\textit{e.i modification function does not equal to identity function}) \ref{listing:mod1}
 
 \begin{listing}
 \begin{minted}{python}
 	modify(i) != i
 \end{minted}
+\caption{The first laws of Modification instance} \label{listing:mod1}
 \end{listing}
 
 \item
-After a certain number of modification the same input produces different outputs (\textit{ e.i. modification function is randomized or depends on outer variables})
+After a certain number of modification the same input produces different outputs (\textit{ e.i. modification function is randomized or depends on outer variables}) \ref{listing:mod2}
 
 \begin{listing}
 \begin{minted}{python}
 	def modify5(i: I) = modify(modify(modify(modify(modify(i)))))
 	modify5(i) != modify5(i)
 \end{minted}
+\caption{The second laws of Modification instance} \label{listing:mod2}
 \end{listing}
 
 
@@ -141,6 +144,9 @@ Scheme
 
 Scheme is a type class, which is responsible for a creation of new individual. This is additional function, which may be replaced by predefined initial population during the start of evolution process, but still offers more functionality and may be used when individuals are created randomly, from limitless iteratator, smaller collection, which should be cycled or even single instance of individual. This concept is implemented as a covariant class, so the scheme object of parent class may be replaced by the scheme object of child class. It allows to easily use this class with hierarchies, avoiding redundant code. 
 \end{itemize} 
+
+\smallskip \textit{Together this satisfies predefined functional requirement \ref{freq:generic}}
+
 \medbreak
 
 \item
@@ -160,42 +166,86 @@ Evolution environment is a component, which taking the set of options constructs
 Local environment
 
 This type of environment presumes local evoluation of evolution flow. It is the richest environments in terms of possible configurations. The logic, behind the strategy of applying genetic operators and evaluating fitness values is decoupled from one another into instances of \texttt{EvolutionCompanion} and \texttt{FitnessEvaluator} classes respectively. For each of the strategies the are sequential and parallel versions, with additional fitness caching option for repetitive individuals within population. Any fitness evaluation strategy may combined with any possible technique of applying genetic operators, creating a number of possibilites ready for use.
+\smallskip\textit{This satisfies predefined functional requirement \ref{freq:par}}
 \medbreak
 
 \item[--]
 Asynchronous environment
 
-Asynchronous environment delegates the function of fitness evaluation to another system, by sending non-blocking asynchronous calls for every element of the population. It may be extremely usefull for the problems with heavy fitness functions. This approach allows to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This type of environment also fits perfectly to cloud computing solutions, as fitness evaluation is entirely isolated from the rest of application. However, applying genetic operators in same way needs to send a lot more data over the network, which negates the benefits one can gain from this approach. For this reason, genetic operators are applied locally with any of the strategies described earlier. 
+Asynchronous environment delegates the function of fitness evaluation to another system, by sending non-blocking asynchronous calls for every element of the population. It may be extremely usefull for the problems with heavy fitness functions. This approach allows to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This type of environment also fits perfectly to cloud computing solutions, as fitness evaluation is entirely isolated from the rest of application. However, applying genetic operators in same way needs to send a lot more data over the network, which negates the benefits one can gain from this approach. For this reason, genetic operators are applied locally with any of the strategies described earlier.
+
+\smallskip \textit{This satisfies predefined functional requirement \ref{freq:async}}
 
 \medbreak
 
 \item[--]
-Distributed environment \label{distr}
+Distributed environment
 
 Distributed environment is very different from the previous options. Here the evolution is performed on the population in terms Spark RDD, distributed over the cluster. This technique enables processing of very large population, since it is split between many executor nodes. Once the evolution step is done executors shuffle the data between each other in order to perform selection of individuals for the next population and continue working on the local values. It minimizes the network communication, which may be a bottle-neck in such applications. 
+
+\smallskip\textit{This satisfies predefined functional requirement \ref{freq:distributed}}
 
 \end{itemize}
 \medbreak
 
 \item
 Evolution flow
-\textit{ToDo - add description}
-\ref{dist}
 
-\medbreak
+Evolution flow represents the endless evolution process of given population. It is implemented as the reactive stream with one output, which may be plugged in into further part of pipeline or executed standalone. During running, evolution flow emits the instance of population once it is computed and starts working on the next one. Since it is a reactive stream, the process of evolution is continued during there is a demand from the downstream. For example, if the sink of pipeline needs to take only 50 first populations, no more than 50 will be computed. This technique allows to leave the variety of possible stop conditions to the end user, including number of elements pushed from the flow, total time, idle time since the last push or any predicate based on the last produced population(s). 
 
-\item 
-Genetic operators
-\textit{ToDo - add description}
+\smallskip\textit{This satisfies predefined functional requirements \ref{freq:stop}, \ref{freq:on-demand}, \ref{freq:best}}
 
 \medbreak
 
 \item Fitness caching
-\textit{ToDo - add description}
 
-\subsection{Meeting the requirements}
-\begin{enumerate}
-\item One
-\end{enumerate}
+Fitness caching is implemented using decorator design pattern over the provided fitness function. It supports every fitness function provided by user, as it simply holds the record over the ranked individuals and returns stored result if it was encountered earlier. The data structure used for holding cached values is concurrent hash trie. It guarantees consistency in multithreaded environment, enabling safe usage with parallel workflows. From the performance side, concurrent hash tries allow to lookup element in logarithmic time, with costant snapshot time \cite{hash_tries} (operation which is performed when two or more threads try to modify the same element).
+
+\smallskip\textit{This satisfies predefined functional requirement \ref{freq:cache}}
+ 
+\medbreak
+
+%\item Genetic operators
+%\textit{ToDo - add description}
 
 \end{itemize}
+
+\subsection{Project structure}
+
+The whole project is devided into three main packages:
+\begin{itemize}
+\item \textit{genetic}
+\item \textit{examples}
+\item \textit{benchmarking}
+\end{itemize}
+
+\textit{examples} and \textit{benchmarking} are additional packages, which demonstate how the library may be used and what results one may achieve by using it, while the main value have the classes from package \textit{genetic}. The source code dependencies between the packages may be found on package diagram \ref{diag:packages}
+
+\begin{figure}[h]
+\centering\includegraphics[width=1.\textwidth]{img/diagrams/alleles-top-packages}
+\caption{Packages and their source dependencies}\label{diag:packages}
+\end{figure}
+
+\textit{genotype} package contains classes, which correspond to the information used to describe behavior of an individual. This is achieved using 4 type classes: \textit{Fitness, Join, Modification} and \textit{Scheme}. This subpackage also contains \textit{CachedFitness} class, which is a wrapper around provided fitness function, with additional caching behavior \ref{diag:genotype-classes}. 
+
+\begin{figure}[h]
+\centering\includegraphics[width=1.\textwidth]{img/diagrams/alleles-genotype}
+\caption{Type classes used to describe an individual}\label{diag:genotype-classes}
+\end{figure}.
+
+\textit{engines} package contains the heavy part of genetic algorithm implementation. Here one may find EvolutionEnvironment class and its concrete implementations. Every child class (parallel implementation) is placed in its specific subpage, so users have to import only the part, which they are interested in or everything, if this is desired. This approach may be seen in project structure \ref{diag:project-structure}, where the interfaces, which are communicating between each other are placed at the top of the package and different variants of their implementation are placed into specific subpackage, which later is important for user needs.
+
+\smallskip\textit{This satisfies predefined non-functional requirement \ref{nfreq:modul}}
+
+\begin{figure}
+\includegraphics[width=.7\textwidth]{img/diagrams/alleles-project-structure}
+\caption{Expanded project structure}\label{diag:project-structure}
+\end{figure}
+
+\medbreak
+The way in which parts of \textit{engines} package are related to each other may be observed in \textit{genetic} class diagram\ref{diag:genetic-classes}
+
+\begin{figure}
+\centering\includegraphics[width=1.\textwidth]{img/diagrams/alleles-genetic-class}
+\caption{Classes diagram from \textit{genetic} package}\label{diag:genetic-classes}
+\end{figure}

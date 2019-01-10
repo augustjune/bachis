@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  10 JAN 2019 03:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  10 JAN 2019 09:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1553,7 +1553,7 @@ Rozdzia\PlPrIeC {\l } 4.
 (./ch3/implementation_overview.tex [13
 
 ] [14]
-<img/spark-runtime-split.png, id=239, 190.20755pt x 151.85568pt>
+<img/spark-runtime-split.png, id=247, 190.20755pt x 151.85568pt>
 File: img/spark-runtime-split.png Graphic file (type png)
 <use img/spark-runtime-split.png>
 Package pdftex.def Info: img/spark-runtime-split.png  used on input line 52.
@@ -1562,7 +1562,7 @@ Package pdftex.def Info: img/spark-runtime-split.png  used on input line 52.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-<img/spark_persistence_levels.png, id=246, 1101.11375pt x 495.8525pt>
+<img/spark_persistence_levels.png, id=254, 1101.11375pt x 495.8525pt>
 File: img/spark_persistence_levels.png Graphic file (type png)
 <use img/spark_persistence_levels.png>
 Package pdftex.def Info: img/spark_persistence_levels.png  used on input line 6
@@ -1584,12 +1584,13 @@ l.72
                                                   
 l.72 
       <./img/spark-runtime-split.png> <./img/spark_persistence_levels.png>]
-<img/akka-streams-1.png, id=252, 2634.84375pt x 1270.7475pt>
+<img/akka-streams-1.png, id=260, 2634.84375pt x 1270.7475pt>
 File: img/akka-streams-1.png Graphic file (type png)
 <use img/akka-streams-1.png>
 Package pdftex.def Info: img/akka-streams-1.png  used on input line 74.
 (pdftex.def)             Requested size: 298.75264pt x 144.06784pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 99.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 100.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1603,7 +1604,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.107 J
+l.108 J
        oin is a type class, which represents a cross function of type \textt...
  <./img/akka-streams-1.png>]
 \openout5 = `praca.pyg'.
@@ -1612,6 +1613,8 @@ l.107 J
 (./_minted-praca/default.pygstyle)
 (./_minted-praca/606785D1A5B2E36265E7E15F3DDC4F7F034E261799D9D111CF875282EB7E57
 27.pygtex)
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 124.
 \openout5 = `praca.pyg'.
 
 
@@ -1621,15 +1624,93 @@ l.107 J
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
 (Font)              using `T1/cmtt/m/n' instead on input line 2.
 
-) [18] [19]
+) [18] [19] [20]
+<img/diagrams/alleles-top-packages.png, id=298, 1405.25pt x 822.07124pt>
+File: img/diagrams/alleles-top-packages.png Graphic file (type png)
+<use img/diagrams/alleles-top-packages.png>
+Package pdftex.def Info: img/diagrams/alleles-top-packages.png  used on input l
+ine 225.
+(pdftex.def)             Requested size: 426.79135pt x 249.6714pt.
+<img/diagrams/alleles-genotype.png, id=300, 1386.17876pt x 512.91624pt>
+File: img/diagrams/alleles-genotype.png Graphic file (type png)
+<use img/diagrams/alleles-genotype.png>
+Package pdftex.def Info: img/diagrams/alleles-genotype.png  used on input line 
+232.
+(pdftex.def)             Requested size: 426.79135pt x 157.92233pt.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+4}) has been already used, duplicate ignored
 
-LaTeX Warning: Reference `dist' on page 20 undefined on input line 183.
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.234 \end{figure}
+                  . <./img/diagrams/alleles-top-packages.png>]
+<img/diagrams/alleles-project-structure.png, id=309, 463.7325pt x 884.30376pt>
+File: img/diagrams/alleles-project-structure.png Graphic file (type png)
+<use img/diagrams/alleles-project-structure.png>
+Package pdftex.def Info: img/diagrams/alleles-project-structure.png  used on in
+put line 241.
+(pdftex.def)             Requested size: 298.75264pt x 569.70364pt.
+<img/diagrams/alleles-genetic-class.png, id=311, 1632.0975pt x 972.63374pt>
+File: img/diagrams/alleles-genetic-class.png Graphic file (type png)
+<use img/diagrams/alleles-genetic-class.png>
+Package pdftex.def Info: img/diagrams/alleles-genetic-class.png  used on input 
+line 249.
+(pdftex.def)             Requested size: 426.79135pt x 254.33324pt.
+)
+(./ch3/usage.tex [22pdfTeX warning (ext4): destination with the same identifier
+ (name{figure.4.5}) has been already used, duplicate ignored
 
-) (./ch3/usage.tex)) (./chapter4.tex [20] [21]
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.15 
+      <./img/diagrams/alleles-genotype.png>] [23pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.4.6}) has been already used, duplicat
+e ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.15 
+      <./img/diagrams/alleles-project-structure.png>]
+Overfull \hbox (68.38347pt too wide) in paragraph at lines 21--22
+[]\T1/cmtt/m/n/12 def evolve[T: Fitness : Join : Modification](options: Evoluti
+onOptions[T]):
+ []
+
+
+Overfull \hbox (62.20998pt too wide) in paragraph at lines 45--46
+[]\T1/cmtt/m/n/12 def nextGeneration[T: Join : Modification](ratedPop: Populati
+on[Rated[T]],
+ []
+
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.46 \end{itemize}
+                   <./img/diagrams/alleles-genetic-class.png>]
+Overfull \hbox (18.99553pt too wide) in paragraph at lines 99--100
+[]\T1/cmtt/m/n/12 def generation[T](population: Population[Rated[T]]): Populati
+on[(T,
+ []
+
+
+Overfull \hbox (40.60275pt too wide) in paragraph at lines 111--112
+[]\T1/cmtt/m/n/12 def generation[G: Join](population: Population[(G, G)]): Popu
+lation[G] 
+ []
+
+
+Overfull \hbox (59.12323pt too wide) in paragraph at lines 123--124
+[]\T1/cmtt/m/n/12 def generation[T: Modification](population: Population[T]): P
+opulation[T] 
+ []
+
+) (./ch3/meeting_requirements.tex)) (./chapter4.tex [25] [26]
 Rozdzia\PlPrIeC {\l } 5.
-) (./praca.bbl [22
+) (./praca.bbl [27
 
-]) [23
+]) [28
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
@@ -1638,39 +1719,33 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: F9D448BC210267188DDCD9FEE0A011D6;1668.
+(rerunfilecheck)             Checksum: 4542803CFF4C6FBA159472B3303C573A;1583.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
 runsystem(rm praca.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 24965 strings out of 492982
- 454598 string characters out of 6134895
- 744830 words of memory out of 5000000
- 27783 multiletter control sequences out of 15000+600000
- 50494 words of font info for 118 fonts, out of 8000000 for 9000
+ 25018 strings out of 492982
+ 455856 string characters out of 6134895
+ 745676 words of memory out of 5000000
+ 27813 multiletter control sequences out of 15000+600000
+ 47877 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,7n,62p,1559b,813s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,7n,62p,1559b,819s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.
 pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fo
 nts/type1/public/tex-gyre/qtmri.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sftt1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on praca.pdf (23 pages, 300444 bytes).
+Output written on praca.pdf (28 pages, 513067 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
- 18156 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 90 named destinations out of 1000 (max. 500000)
+ 17656 words of extra memory for PDF output out of 20736 (max. 10000000)
 

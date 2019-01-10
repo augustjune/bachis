@@ -16,11 +16,10 @@
 \contentsline {section}{\numberline {4.1\relax .\kern .5em }Implementation overview}{13}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1\relax .\kern .5em }Technology stack}{13}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2\relax .\kern .5em }Core components}{17}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3\relax .\kern .5em }Meeting the requirements}{20}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2\relax .\kern .5em }Usage}{20}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1\relax .\kern .5em }Requirements}{20}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2\relax .\kern .5em }API}{20}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3\relax .\kern .5em }Preimplemented algorithms}{20}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4\relax .\kern .5em }Evolution interruption}{21}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5\relax .\kern .5em }Future work}{22}{chapter.5}
-\contentsline {chapter}{Bibliografia}{23}{chapter*.8}
+\contentsline {subsection}{\numberline {4.1.3\relax .\kern .5em }Project structure}{21}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2\relax .\kern .5em }Usage}{22}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1\relax .\kern .5em }Requirements}{22}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2\relax .\kern .5em }API}{24}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3\relax .\kern .5em }Meeting the predefined requirements}{26}{section.4.3}
+\contentsline {chapter}{\numberline {5\relax .\kern .5em }Survey}{27}{chapter.5}
+\contentsline {chapter}{Bibliografia}{28}{chapter*.8}
