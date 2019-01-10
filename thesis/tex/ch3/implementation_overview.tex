@@ -170,7 +170,7 @@ Asynchronous environment delegates the function of fitness evaluation to another
 \medbreak
 
 \item[--]
-Distributed environment
+Distributed environment \label{distr}
 
 Distributed environment is very different from the previous options. Here the evolution is performed on the population in terms Spark RDD, distributed over the cluster. This technique enables processing of very large population, since it is split between many executor nodes. Once the evolution step is done executors shuffle the data between each other in order to perform selection of individuals for the next population and continue working on the local values. It minimizes the network communication, which may be a bottle-neck in such applications. 
 
@@ -180,6 +180,7 @@ Distributed environment is very different from the previous options. Here the ev
 \item
 Evolution flow
 \textit{ToDo - add description}
+\ref{dist}
 
 \medbreak
 
@@ -191,5 +192,10 @@ Genetic operators
 
 \item Fitness caching
 \textit{ToDo - add description}
+
+\subsection{Meeting the requirements}
+\begin{enumerate}
+\item One
+\end{enumerate}
 
 \end{itemize}

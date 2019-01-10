@@ -3,17 +3,24 @@
 \BOOKMARK [0][-]{chapter*.4}{Spis tabel}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 5
-\BOOKMARK [0][-]{chapter.3}{Existing solutions overview}{}% 6
-\BOOKMARK [0][-]{chapter.4}{What is my solution to a given problem?}{}% 7
-\BOOKMARK [1][-]{section.4.1}{Idea}{chapter.4}% 8
-\BOOKMARK [1][-]{section.4.2}{Key concepts}{chapter.4}% 9
-\BOOKMARK [1][-]{section.4.3}{Implementation overview}{chapter.4}% 10
-\BOOKMARK [2][-]{subsection.4.3.1}{Technology stack}{section.4.3}% 11
-\BOOKMARK [2][-]{subsection.4.3.2}{Core components}{section.4.3}% 12
-\BOOKMARK [1][-]{section.4.4}{Usage}{chapter.4}% 13
-\BOOKMARK [2][-]{subsection.4.4.1}{Requirements}{section.4.4}% 14
-\BOOKMARK [2][-]{subsection.4.4.2}{API}{section.4.4}% 15
-\BOOKMARK [2][-]{subsection.4.4.3}{Preimplemented algorithms}{section.4.4}% 16
-\BOOKMARK [2][-]{subsection.4.4.4}{Evolution interruption}{section.4.4}% 17
-\BOOKMARK [0][-]{chapter.5}{Future work}{}% 18
-\BOOKMARK [0][-]{chapter*.8}{Bibliografia}{}% 19
+\BOOKMARK [1][-]{section.2.1}{Domain overview}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{How evolutionary algorithms are used nowadays?}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{Disadvantages}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{Solution proposal}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Non-functional requirements}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{Functional requirements}{section.2.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Existing solutions overview}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Java Jenetics}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Apache.math.genetics}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{What is my solution to a given problem?}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Implementation overview}{chapter.4}% 16
+\BOOKMARK [2][-]{subsection.4.1.1}{Technology stack}{section.4.1}% 17
+\BOOKMARK [2][-]{subsection.4.1.2}{Core components}{section.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.1.3}{Meeting the requirements}{section.4.1}% 19
+\BOOKMARK [1][-]{section.4.2}{Usage}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.2.1}{Requirements}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.2}{API}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.3}{Preimplemented algorithms}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.4}{Evolution interruption}{section.4.2}% 24
+\BOOKMARK [0][-]{chapter.5}{Future work}{}% 25
+\BOOKMARK [0][-]{chapter*.8}{Bibliografia}{}% 26

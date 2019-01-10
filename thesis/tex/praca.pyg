@@ -1,2 +1,0 @@
-	def modify5(i: I) = modify(modify(modify(modify(modify(i)))))
-	modify5(i) != modify5(i)
