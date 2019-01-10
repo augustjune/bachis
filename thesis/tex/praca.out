@@ -1,25 +1,25 @@
 \BOOKMARK [0][-]{chapter*.2}{Spis rysunk\363w}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Spis listing\363w}{}% 2
 \BOOKMARK [0][-]{chapter*.4}{Spis tabel}{}% 3
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
-\BOOKMARK [0][-]{chapter.2}{Background}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Domain overview}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.1.1}{How evolutionary algorithms are used nowadays?}{section.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.1.2}{Disadvantages}{section.2.1}% 8
-\BOOKMARK [1][-]{section.2.2}{Solution proposal}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.1}{Non-functional requirements}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.2}{Functional requirements}{section.2.2}% 11
-\BOOKMARK [0][-]{chapter.3}{Existing solutions overview}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Java Jenetics}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.2}{Apache.math.genetics}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{What is my solution to a given problem?}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Implementation overview}{chapter.4}% 16
-\BOOKMARK [2][-]{subsection.4.1.1}{Technology stack}{section.4.1}% 17
-\BOOKMARK [2][-]{subsection.4.1.2}{Core components}{section.4.1}% 18
-\BOOKMARK [2][-]{subsection.4.1.3}{Project structure}{section.4.1}% 19
-\BOOKMARK [1][-]{section.4.2}{Usage}{chapter.4}% 20
-\BOOKMARK [2][-]{subsection.4.2.1}{Requirements}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.2}{API}{section.4.2}% 22
-\BOOKMARK [1][-]{section.4.3}{Meeting the predefined requirements}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Survey}{}% 24
+\BOOKMARK [0][-]{chapter.1}{Background}{}% 4
+\BOOKMARK [1][-]{section.1.1}{Domain overview}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.1}{How evolutionary algorithms are used nowadays?}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.2}{Disadvantages}{section.1.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Solution proposal}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.2.1}{Non-functional requirements}{section.1.2}% 9
+\BOOKMARK [2][-]{subsection.1.2.2}{Functional requirements}{section.1.2}% 10
+\BOOKMARK [0][-]{chapter.2}{Existing solutions overview}{}% 11
+\BOOKMARK [1][-]{section.2.1}{Apache.math.genetics}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Java Jenetics}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.3}{Conclusions of overview}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Presentation of solution}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Implementation overview}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.1.1}{Technology stack}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.2}{Core components}{section.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.1.3}{Project structure}{section.3.1}% 19
+\BOOKMARK [1][-]{section.3.2}{Usage}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.2.1}{Requirements}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.2}{API}{section.3.2}% 22
+\BOOKMARK [1][-]{section.3.3}{Meeting the predefined requirements}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{Survey}{}% 24
 \BOOKMARK [0][-]{chapter*.8}{Bibliografia}{}% 25

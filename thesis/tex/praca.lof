@@ -4,13 +4,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1.}{\ignorespaces The components of a distributed Spark application \cite {learning_spark}.}}{16}{figure.4.1}
-\contentsline {figure}{\numberline {4.2.}{\ignorespaces Persistence levels from org.apache.spark.storage.StorageLevel and pyspark.StorageLevel \cite {learning_spark}.}}{16}{figure.4.2}
-\contentsline {figure}{\numberline {4.3.}{\ignorespaces A typical stream flow}}{17}{figure.4.3}
-\contentsline {figure}{\numberline {4.4.}{\ignorespaces Packages and their source dependencies}}{21}{figure.4.4}
-\contentsline {figure}{\numberline {4.5.}{\ignorespaces Type classes used to describe an individual}}{22}{figure.4.5}
-\contentsline {figure}{\numberline {4.6.}{\ignorespaces Expanded project structure}}{23}{figure.4.6}
-\contentsline {figure}{\numberline {4.7.}{\ignorespaces Classes diagram from \textit {genetic} package}}{24}{figure.4.7}
+\contentsline {figure}{\numberline {3.1.}{\ignorespaces The components of a distributed Spark application \cite {learning_spark}.}}{16}{figure.3.1}
+\contentsline {figure}{\numberline {3.2.}{\ignorespaces Persistence levels from org.apache.spark.storage.StorageLevel and pyspark.StorageLevel \cite {learning_spark}.}}{16}{figure.3.2}
+\contentsline {figure}{\numberline {3.3.}{\ignorespaces Packages and their source dependencies}}{22}{figure.3.3}
+\contentsline {figure}{\numberline {3.4.}{\ignorespaces Type classes used to describe an individual}}{23}{figure.3.4}
+\contentsline {figure}{\numberline {3.5.}{\ignorespaces Expanded project structure}}{24}{figure.3.5}
+\contentsline {figure}{\numberline {3.6.}{\ignorespaces Classes diagram from \textit {genetic} package}}{25}{figure.3.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

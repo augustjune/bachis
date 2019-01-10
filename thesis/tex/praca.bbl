@@ -26,4 +26,15 @@ Prokopec, A., Miller, H., \emph{Parallel collections overview},
 Sivanandam, S.N., Deepa, S.N., \emph{Introduction to Genetic Algorithms}, 1st
   wyd. (Springer Publishing Company, Incorporated, 2007).
 
+\bibitem{stream_refs}
+team, A., \emph{Streamrefs - reactive streams over the network},
+  \url{https://doc.akka.io/docs/akka/2.5/stream/stream-refs.html}.
+
+\bibitem{apache_genetics}
+team, A.F., \emph{Streamrefs - reactive streams over the network},
+  \url{http://commons.apache.org/proper/commons-math/userguide/genetics.html}.
+
+\bibitem{jenetics_manual}
+Wilhelmstötter, F., \emph{Jenetics. Library user's manual}.
+
 \end{thebibliography}

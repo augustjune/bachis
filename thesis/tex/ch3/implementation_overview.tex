@@ -63,32 +63,30 @@ In order to be able to transforms large sets of data without redundant recomputa
 pyspark.StorageLevel \cite{learning_spark}.}\label{img:spark_persistence_levels}
 \end{figure}
 
-
-
 \subsubsection{Akka Streams}
-
 
 Akka Streams is a library to process and transfer a sequence of elements using bounded buffer space. This latter property is what is ususally referred as boundedness and it is the defining feature of Akka Streams. Translated to everyday terms it is possible to express a chain of processing entities, each executing independently (and possibly concurrently) from the others while only buffering a limited number of elements at any given time. 
 
-\begin{figure}
-\centering\includegraphics[width=.7\textwidth]{img/akka-streams-1}
-\caption{A typical stream flow}\label{img:streams-1}
-\end{figure}
+The purpose is to offer an intuitive and safe way to formulate stream processing setups such that they may be executed efficiently later and with bounded resource usage. In order to achieve this  streams need to be able to limit the buffering that they employ, they need to be able to slow down producers if the consumers cannot keep up. This feature is called back-pressure and is at the core of the Reactive Streams initiative of which Akka is a founding member.
 
+Unlike heavier “streaming data processing” frameworks, Akka Streams are not “deployed” nor automatically distributed. Akka stream refs are, as the name implies, references to existing parts of a stream, and can be used to create a distributed processing framework or introduce such capabilities in specific parts of your application.
 
-\textit{ToDo: more info}
+Stream refs are well suited for any system in which you need to send messages between nodes and need to do so in a flow-controlled fashion. Typical examples include sending work requests to worker nodes, as fast as possible, but not faster than the worker node can process them, or sending data elements which the downstream may be slow at processing. \cite{stream_refs}
 
+Using reactive streams the first limitation of the pipeline is downstream, which implicitly asks upstreams for the data. With this in mind the upstream can be unbounded by the definition and emit data as long as there is someone, who is interested in it. If there is noone asking for new commits the stream remains inactive without resources consumption. 
+
+This is a great candidate for representation an evolution flow in genetic algorithms as primarily it is unlimited, but may paused, slowed or stopped in any given moment, basing on some external data (like time or number of iterations) or state of the stream itself (the data it is committing).
 
 \subsection{Core components}
 
-\textit{ToDo: add introduction}
+This is a list of core components of demonstrated solution. It contains also a description of what is the purpose of the component and how it is implemented. All of the functional requirements are fulfilled in terms of these components.
 
 \begin{itemize}
 
 \item
 Individual
 
-An individual is a core component of genetic algorithm, often also reffered to as a \textit{genotype, chromosome \emph{or} a candidate}, which represents a candidate solution to a given problem. The number of individuals are evolved during the algorithm workflow, mixed and mutated in order to find the fittest one according to provided fitness function. This concept is purely abstract in the library, encoded as a generic type which may have an arbitrary representation defined by the users depending on their needs. 
+An individual is a core component of genetic algorithm, often also referred to as a \textit{genotype, chromosome \emph{or} a candidate}, which represents a candidate solution to a given problem. The number of individuals are evolved during the algorithm workflow, mixed and mutated in order to find the fittest one according to provided fitness function. This concept is purely abstract in the library, encoded as a generic type which may have an arbitrary representation defined by the users depending on their needs. 
 
 In order to handle an individual through the process of evolution there should be defined a set of operators, where each encapsulates logic of some part of evolution procedure.   
 \medbreak
@@ -97,7 +95,7 @@ In order to handle an individual through the process of evolution there should b
 \item
 Fitness
 
-Fitness is a type class which represents a function of type \texttt{I => Double}, where \texttt{I} is type of individual. This function summarises how close a given design solution is to achieving the set aims. A ftness function must be devised for each problem to be solved, thus should be provided by the user and may not be preimplemented. Fitness function value is main criterion of future selection and is very important attribute of individual representation.
+Fitness is a type class which represents a function of type \texttt{I => Double}, where \texttt{I} is type of individual. This function summarizes how close a given design solution is to achieving the set aims. A fitness function must be devised for each problem to be solved, thus should be provided by the user and may not be preimplemented. Fitness function value is main criterion of future selection and is very important attribute of individual representation.
 
 \textit{ToDo - how much does it cost}
 \medbreak
@@ -111,7 +109,7 @@ Join is a type class, which represents a cross function of type \texttt{(I, I) =
 \item
 Modification
 
-Modification is a type class, which represents a mutation function of type \texttt{I => I}, where \texttt{I} is type of individual. This operator is used to maintain generic diversity from one generation of a population to another. It is analogous to biological mutation. Mutation alters one or more gene values in a chromosome from its initial state, during which the solution may change entirely from the former shape. Because of its loose representation (even identity function may be considered as modification) it is important to provide a set of laws, which will distinguish a modification, which actually brings a diversity into the population. A \textit{lawfull} modification function is one, which holds following properties:
+Modification is a type class, which represents a mutation function of type \texttt{I => I}, where \texttt{I} is type of individual. This operator is used to maintain generic diversity from one generation of a population to another. It is analogous to biological mutation. Mutation alters one or more gene values in a chromosome from its initial state, during which the solution may change entirely from the former shape. Because of its loose representation (even identity function may be considered as modification) it is important to provide a set of laws, which will distinguish a modification, which actually brings a diversity into the population. A \textit{lawful} modification function is one, which holds following properties:
 
 \begin{enumerate}
 \item
@@ -142,7 +140,7 @@ After a certain number of modification the same input produces different outputs
 \item
 Scheme
 
-Scheme is a type class, which is responsible for a creation of new individual. This is additional function, which may be replaced by predefined initial population during the start of evolution process, but still offers more functionality and may be used when individuals are created randomly, from limitless iteratator, smaller collection, which should be cycled or even single instance of individual. This concept is implemented as a covariant class, so the scheme object of parent class may be replaced by the scheme object of child class. It allows to easily use this class with hierarchies, avoiding redundant code. 
+Scheme is a type class, which is responsible for a creation of new individual. This is additional function, which may be replaced by predefined initial population during the start of evolution process, but still offers more functionality and may be used when individuals are created randomly, from limitless iterator, smaller collection, which should be cycled or even single instance of individual. This concept is implemented as a covariant class, so the scheme object of parent class may be replaced by the scheme object of child class. It allows to easily use this class with hierarchies, avoiding redundant code. 
 \end{itemize} 
 
 \smallskip \textit{Together this satisfies predefined functional requirement \ref{freq:generic}}
@@ -152,27 +150,27 @@ Scheme is a type class, which is responsible for a creation of new individual. T
 \item
 Population
 
-Population is a collecion of individuals, which holds them during single evolution step. Individuals are processed together and are viewed only as a part of population from the perspective of algorithm. During the evolution step the representation of population or holding type may be changed (e.g. after selection stage further processed population contains pair of individuals, which are meant to be mixed later).
+Population is a collection of individuals, which holds them during single evolution step. Individuals are processed together and are viewed only as a part of population from the perspective of algorithm. During the evolution step the representation of population or holding type may be changed (e.g. after selection stage further processed population contains pair of individuals, which are meant to be mixed later).
 
-From implementation perspective, population is a type alias to Scala vector collection. The choise of data structure was motivated by fast average performance and effectively constant random access time in particular.
+From implementation perspective, population is a type alias to Scala vector collection. The choice of data structure was motivated by fast average performance and effectively constant random access time in particular.
 \medbreak
 
 \item
 Evolution environment
 
-Evolution environment is a component, which taking the set of options constructs endless evolution flow of given population and makes it ready to be run. It is a parent type to all implementations of different approaches in processing computations, which may be sequential or parallel, local or distributed. This concept is very important from the usage perspective as it devides the implementation of genetic algorithm from its usage, so the end user may even not be aware of the way how the evolution is performed. It is also the end point of all the dependent components, as there is no direct dependency to any of concrete implementation of evolution environment. This abstraction may be considered as high level representation of genetic algorithm itself. The list of concrete derivatives of this interace contains:
+Evolution environment is a component, which taking the set of options constructs endless evolution flow of given population and makes it ready to be run. It is a parent type to all implementations of different approaches in processing computations, which may be sequential or parallel, local or distributed. This concept is very important from the usage perspective as it divides the implementation of genetic algorithm from its usage, so the end user may even not be aware of the way how the evolution is performed. It is also the end point of all the dependent components, as there is no direct dependency to any of concrete implementation of evolution environment. This abstraction may be considered as high level representation of genetic algorithm itself. The list of concrete derivatives of this interface contains:
 \begin{itemize}
 \item[--]
 Local environment
 
-This type of environment presumes local evoluation of evolution flow. It is the richest environments in terms of possible configurations. The logic, behind the strategy of applying genetic operators and evaluating fitness values is decoupled from one another into instances of \texttt{EvolutionCompanion} and \texttt{FitnessEvaluator} classes respectively. For each of the strategies the are sequential and parallel versions, with additional fitness caching option for repetitive individuals within population. Any fitness evaluation strategy may combined with any possible technique of applying genetic operators, creating a number of possibilites ready for use.
+This type of environment presumes local evolution of evolution flow. It is the richest environments in terms of possible configurations. The logic, behind the strategy of applying genetic operators and evaluating fitness values is decoupled from one another into instances of \texttt{EvolutionCompanion} and \texttt{FitnessEvaluator} classes respectively. For each of the strategies the are sequential and parallel versions, with additional fitness caching option for repetitive individuals within population. Any fitness evaluation strategy may combined with any possible technique of applying genetic operators, creating a number of possibilities ready for use.
 \smallskip\textit{This satisfies predefined functional requirement \ref{freq:par}}
 \medbreak
 
 \item[--]
 Asynchronous environment
 
-Asynchronous environment delegates the function of fitness evaluation to another system, by sending non-blocking asynchronous calls for every element of the population. It may be extremely usefull for the problems with heavy fitness functions. This approach allows to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This type of environment also fits perfectly to cloud computing solutions, as fitness evaluation is entirely isolated from the rest of application. However, applying genetic operators in same way needs to send a lot more data over the network, which negates the benefits one can gain from this approach. For this reason, genetic operators are applied locally with any of the strategies described earlier.
+Asynchronous environment delegates the function of fitness evaluation to another system, by sending non-blocking asynchronous calls for every element of the population. It may be extremely useful for the problems with heavy fitness functions. This approach allows to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This type of environment also fits perfectly to cloud computing solutions, as fitness evaluation is entirely isolated from the rest of application. However, applying genetic operators in same way needs to send a lot more data over the network, which negates the benefits one can gain from this approach. For this reason, genetic operators are applied locally with any of the strategies described earlier.
 
 \smallskip \textit{This satisfies predefined functional requirement \ref{freq:async}}
 
@@ -181,7 +179,7 @@ Asynchronous environment delegates the function of fitness evaluation to another
 \item[--]
 Distributed environment
 
-Distributed environment is very different from the previous options. Here the evolution is performed on the population in terms Spark RDD, distributed over the cluster. This technique enables processing of very large population, since it is split between many executor nodes. Once the evolution step is done executors shuffle the data between each other in order to perform selection of individuals for the next population and continue working on the local values. It minimizes the network communication, which may be a bottle-neck in such applications. 
+Distributed environment is very different from the previous options. Here the evolution is performed on the population in terms of Spark RDD, distributed over the cluster. Each of the executors works on its part of the data, which increases overall performance. This technique enables processing of very large population, since it is split between many executor nodes. Once the evolution step is done executors shuffle the data between each other in order to perform selection of individuals for the next population and continue working on the local values. It minimizes the network communication, which may be a bottle-neck in such applications. 
 
 \smallskip\textit{This satisfies predefined functional requirement \ref{freq:distributed}}
 
@@ -199,7 +197,7 @@ Evolution flow represents the endless evolution process of given population. It 
 
 \item Fitness caching
 
-Fitness caching is implemented using decorator design pattern over the provided fitness function. It supports every fitness function provided by user, as it simply holds the record over the ranked individuals and returns stored result if it was encountered earlier. The data structure used for holding cached values is concurrent hash trie. It guarantees consistency in multithreaded environment, enabling safe usage with parallel workflows. From the performance side, concurrent hash tries allow to lookup element in logarithmic time, with costant snapshot time \cite{hash_tries} (operation which is performed when two or more threads try to modify the same element).
+Fitness caching is implemented using decorator design pattern over the provided fitness function. It supports every fitness function provided by user, as it simply holds the record over the ranked individuals and returns stored result if it was encountered earlier. The data structure used for holding cached values is concurrent hash trie. It guarantees consistency in multi-threaded environment, enabling safe usage with parallel workflows. From the performance side, concurrent hash tries allow to lookup element in logarithmic time, with constant snapshot time \cite{hash_tries} (operation which is performed when two or more threads try to modify the same element).
 
 \smallskip\textit{This satisfies predefined functional requirement \ref{freq:cache}}
  
@@ -212,28 +210,28 @@ Fitness caching is implemented using decorator design pattern over the provided 
 
 \subsection{Project structure}
 
-The whole project is devided into three main packages:
+The whole project is divided into three main packages:
 \begin{itemize}
 \item \textit{genetic}
 \item \textit{examples}
 \item \textit{benchmarking}
 \end{itemize}
 
-\textit{examples} and \textit{benchmarking} are additional packages, which demonstate how the library may be used and what results one may achieve by using it, while the main value have the classes from package \textit{genetic}. The source code dependencies between the packages may be found on package diagram \ref{diag:packages}
+\textit{examples} and \textit{benchmarking} are additional packages, which demonstrate how the library may be used and what results one may achieve by using it, while the main value have the classes from package \textit{genetic}. The source code dependencies between the packages may be found on package diagram \ref{diag:packages}
 
 \begin{figure}[h]
 \centering\includegraphics[width=1.\textwidth]{img/diagrams/alleles-top-packages}
 \caption{Packages and their source dependencies}\label{diag:packages}
 \end{figure}
 
-\textit{genotype} package contains classes, which correspond to the information used to describe behavior of an individual. This is achieved using 4 type classes: \textit{Fitness, Join, Modification} and \textit{Scheme}. This subpackage also contains \textit{CachedFitness} class, which is a wrapper around provided fitness function, with additional caching behavior \ref{diag:genotype-classes}. 
+\textit{genotype} package contains classes, which correspond to the information used to describe behavior of an individual. This is achieved using 4 type classes: \textit{Fitness, Join, Modification} and \textit{Scheme}. This sub-package also contains \textit{CachedFitness} class, which is a wrapper around provided fitness function, with additional caching behavior \ref{diag:genotype-classes}. 
 
 \begin{figure}[h]
 \centering\includegraphics[width=1.\textwidth]{img/diagrams/alleles-genotype}
 \caption{Type classes used to describe an individual}\label{diag:genotype-classes}
 \end{figure}.
 
-\textit{engines} package contains the heavy part of genetic algorithm implementation. Here one may find EvolutionEnvironment class and its concrete implementations. Every child class (parallel implementation) is placed in its specific subpage, so users have to import only the part, which they are interested in or everything, if this is desired. This approach may be seen in project structure \ref{diag:project-structure}, where the interfaces, which are communicating between each other are placed at the top of the package and different variants of their implementation are placed into specific subpackage, which later is important for user needs.
+\textit{engines} package contains the heavy part of genetic algorithm implementation. Here one may find EvolutionEnvironment class and its concrete implementations. Every child class (parallel implementation) is placed in its specific subpage, so users have to import only the part, which they are interested in or everything, if this is desired. This approach may be seen in project structure \ref{diag:project-structure}, where the interfaces, which are communicating between each other are placed at the top of the package and different variants of their implementation are placed into specific sub-package, which later is important for user needs.
 
 \smallskip\textit{This satisfies predefined non-functional requirement \ref{nfreq:modul}}
 

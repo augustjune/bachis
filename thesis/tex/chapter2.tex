@@ -1,5 +1,39 @@
 \chapter{Existing solutions overview}
 
-\section{Java Jenetics}
+Earlier addressed problems are well known in world, so there already were tries to create similar solutions. While searching for alternative solutions non-functional requirements were taken into account:
+\begin{itemize}
+
+\item a solution had to be written or at least executed on JVM platform 
+
+\item a solution had to present users its open code (not necessarily be open-source)
+\end{itemize}
+
+As a result of the search only two nearly comprehensive solutions were found: 
+\begin{enumerate}
+\item Java Jenetics library
+
+\item Apache.math.genetics package
+\end{enumerate}
+
+After these candidates were precisely studied, here is published a high level overview for both of them.
 
 \section{Apache.math.genetics}
+
+Apache.math.genetics is a package under Apache Software Foundation for Java programming language. It covers the basic components of genetic algorithm implementation such as genetic algorithm, fitness function, stop condition, genetic operator.
+
+GeneticAlgorithm provides an execution framework for Genetic Algorithms (GA). Populations, consisting of Chromosomes are evolved by the GeneticAlgorithm until a StoppingCondition is reached. Evolution is determined by SelectionPolicy, MutationPolicy and Fitness. \cite{apache_genetics}
+
+However the amount of topic it covers is relatively small to the scope, described earlier. In terms of predefined functional requirements this solutions meet only small part of them (\ref{freq:best}, \ref{freq:stop}) and thus can not be considered as accomplished solution.
+
+\section{Java Jenetics}
+
+Java Jenetics - is an advanced Genetic Algorithm, Evolutionary Algorithm and Genetic Programming library, respectively, written in modern day Java. \cite{jenetics_manual}. This is more comprehensive toolbox, then one described earlier, containing a lot of different features and active community. The main advantage of this library is parallelization of fitness evaluation, by splitting a population into number of batches and proceeding them in parallel. It is worth mentioning that Jenetics use Java Streams API as a result of evolution, which is considerably good solution, taking into account the background of evolutionary algorithms. 
+
+Still, being a reacher candidate it misses some crucial functional requirements. For example, the parallelization process cannot be expanded to cluster and is locked within one instance of JVM \ref{freq:distributed}. Asynchronous fitness evaluation is possible only with blocking calls \ref{freq:async}, which negates all the benefit of such solution. In addition, the problems which may be used with this implementation of GA are limited to represent a solution as an array of bits, real or integer numbers, failing one more crucial functional requirement \ref{freq:generic}.
+
+Summarizing, even though Java Jenetics may be found usable for some subset of problems, it is not suitable as solution for the requirements of this theses.
+
+\section{Conclusions of overview}
+
+After performing comparison and overview of the existing solution, which could potentially met created requirements, it is clear, that there was not found a comprehensive solution, which could be considered as fulfilled from the previously stated points. 
+
