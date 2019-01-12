@@ -2,7 +2,7 @@
 
 \section{Domain overview}
 
-In artificial intelligence, an evolutionary algorithm (EA) is a subset of evolutionary computation, a generic population-based metaheuristic optimization algorithm. An EA uses mechanisms inspired by biological evolution, such as reproduction, mutation, recombination, and selection. Candidate solutions to the optimization problem play the role of individuals in a population, and the fitness function determines the quality of the solutions. Evolution of the population then takes place after the repeated application of the above operators.
+Starting from the definition, an evolutionary algorithm (EA) is a subset of evolutionary computation, a generic population-based metaheuristic optimization algorithm. An EA uses mechanisms inspired by biological evolution, such as reproduction, mutation, recombination, and selection. Candidate solutions to the optimization problem play the role of individuals in a population, and the fitness function determines the quality of the solutions. Evolution of the population then takes place after the repeated application of the above operators.
 
 Evolutionary algorithms often perform well approximating solutions to all types of problems because they ideally do not make any assumption about the underlying fitness landscape. Techniques from evolutionary algorithms applied to the modeling of biological evolution are generally limited to explorations of microevolutionary processes and planning models based upon cellular processes. In most real applications of EAs, computational complexity is a prohibiting factor. In fact, this computational complexity is due to fitness function evaluation. Fitness approximation is one of the solutions to overcome this difficulty. However, seemingly simple EA can solve often complex problems[citation needed]; therefore, there may be no direct link between algorithm complexity and problem complexity.
 
@@ -21,16 +21,14 @@ As every other technique, genetic algorithm has its flaws. In this theses the au
 \begin{enumerate}
 \item \textbf{Implementation complexity}
 
-There are many problems of different types, which may me optimized by genetic algorithms. The downside is that for each of those problems there is a need of specific implementation, which is at least time consuming. Even though the low level details, which depend on the problem GA is applied to, will change, the high level abstraction of genetic algorithm workflow remains the same: a population of individuals are processed in pipeline of genetic operators, resulting in a new fitter population.
-
-A solution for this problem would be a high level generic representation of genetic algorithm, which may be reusable among variety of application and independent from the low level details. 
+There are many problems of different types, which may me optimized by genetic algorithms. The downside is that for each of those problems there is a need of specific implementation, which is at least time consuming. Even though the low level details, which depend on the problem GA is applied to, will change, the high level abstraction of genetic algorithm workflow remains the same. This makes it possible to implement generic representation of genetic algorithm, which may be reusable among variety of application and be independent from the low level details. 
 \medbreak
 
 \item \textbf{Computation cost}
 
-Genetic algorithms tend to be very time consuming. This is strictly related to its computation model, as the function, used in GA, are usually very demanding.
+Genetic algorithms tend to be very time consuming. This is strictly related to its computation model, as the function, used in GA, are usually very demanding. There are a lot of approaches to decrease the time it takes to produce desirable result by applying cached (or partly cached) fitness function or use its approximation, avoiding the large-size data and using many low-level optimization in different parts of the algorithm. All of these improvements are beneficial but take time to implement.
 
-This characteristic of genetic algorithms, however, may be negated by the usage of parallelization.
+An additional method for performance optimization, available right out of the box is workflow parallelization. This should allow users to use full capabilities of hardware in their use and also be transparent for users, saving them a lot of efforts and time.
 \medbreak
 
 \end{enumerate}
@@ -43,7 +41,7 @@ A solution for described flaws would be a tool, which allows to integrate a high
 \begin{enumerate}
 \item \textbf{Java Virtual Machine}
 
-This platform was chosen, because of its popularity and open nature. Java virtual machine is supported by many languages, what allows a user to pick a specific one, which is the best for a given circumstances. JVM is also vastly used and run on over 3 billion devices\footnote{According to official information provided by Oracle Corporation}.
+This platform was chosen, because of its popularity and open nature. Java virtual machine is supported by many languages, what allows a user to pick a specific one, which is the best for a given circumstances. JVM is also vastly used and run on over 3 billion devices\footnote{According to official information provided by Oracle Corporation}. It takes the responsibility of platform organizing hardware environment, allowing the application designers to be platform agnostic. It is very convenient in terms of program correctness - meaning that if the program runs on one machine, it is highly probable to run as expected on the other machine satisfying minimum requirements. Sun's famous slogan \textit{``Write once, run everywhere''} is only valid due to Java virtual machine and its ability to run standard bytecode.
 \medbreak
 
 \item \textbf{Open implementation}
@@ -60,28 +58,30 @@ The architecture solution used to build the tool has contain modularity among it
 \subsection{Functional requirements}
 \begin{enumerate}
 \item \label{freq:stop} \textbf{Limiting the evolution in terms of time and/or number of iterations}
+
 This is basic requirement for every genetic algorithm implementation. Evolution process takes time and in order to benefit from it, user must have access to the evolved version of population. Number of iterations corresponds to the number of evolution cycles performed on the population, when every genetic operator is applied to it. On the other hand, the actual time of the evolution may be changed even in terms of the same number of iterations, as it strongly depends on performance of genetic operators and fitness function, so in some cases time may be the only valid criterion, which decides that evolution process should be stopped. 
 \medbreak
 
 \item \label{freq:best} \textbf{Control of the best individual through evolution}
 
-During the evolution process, due to the chosen selection, crossover or mutation strategies, even the fittest individual may not end in the next population. As for business needs it is important to get the best solution ever discovered by algorithm, it is important to store reference to that candidate separately.
+During the evolution process, due to the chosen selection, crossover or mutation strategies, even the fittest individual may not end in the next population. As for business needs it is important to get the best solution ever discovered by algorithm, it is useful to store reference to that candidate separately, as well as its fitness value to avoid unnecessary re-computation.
 \medbreak
 
 \item \label{freq:cache} \textbf{Fitness values caching}
-In genetic algorithms, the computation of the fitness function provides the largest computational load for the algorithm. Each population generation is composed of individuals who are formed from previous generation via cloning, crossover, or mutation. It is also common for the individual to migrate to the next population without a change or, less common, a crossover of two different individuals may produce a genotype that already has been discovered earlier. If this occurs rather frequently, it is unprofitable to compute the fitness value all over again. As a solution one may consider caching the results of fitness computation for later re-usage. Although it noticeably increases the speed of algorithm, the cache tends to grow dramatically, so the choice of data structure for this purposes is extremely important. 
+
+In genetic algorithms, the computation of the fitness function comes with the largest computational load for the algorithm. Each population generation is composed of individuals who are formed from previous generation via cloning, crossover, or mutation. For each new individual it necessary to assign a fitness function value, which determines how good a candidate is. It is also common for the individual to migrate to the next population without a change or, less common, a crossover of two different individuals may produce a genotype that already has been discovered earlier. If this occurs frequently, it is unprofitable to compute the fitness value all over again. As a solution one may consider caching the results of fitness computation for later re-usage. Although it noticeably increases the speed of algorithm, the cache tends to grow very fast, so the choice of data structure for this purposes is extremely important. 
 \medbreak
 
 \item \label{freq:par} \textbf{Parallel evolution processing}
 
-Genetic algorithms are generally known as a time-consuming technique, as it is often used with complex, high-dimensional problems. Evolution cycle may take up to hours and days of continuous computing, depending on the parameters of the algorithm and hardware in use, which comes with a great cost and very low flexibility, as with every mistake or change was done to algorithm implementation, evolution needs to be re-executed. On the other hand, even small upgrades in speed may result as a major cost cut.
+Genetic algorithms are generally known as a time-consuming technique, as it is often used with complex, high-dimensional problems. Evolution cycle may take up to hours and days of continuous computing, depending on the parameters of the algorithm and hardware in use, which comes with a great cost and very low flexibility, as with every mistake or change was done to algorithm implementation, evolution needs to be re-executed from scratch. On the other hand, even small upgrades in speed may result as a major cost cut.
 
-For this reason, it is highly important to use the maximum of the given resources, avoiding unreasonable workloads. It may be achieved through the computation parallelization between multiple virtual CPU cores within a single machine
+For this reason, it is highly important to use the maximum of the given resources, avoiding unreasonable workloads. It may be achieved through the computation parallelization between multiple virtual CPU cores within a single machine.
 \medbreak
 
 \item \label{freq:async} \textbf{Asynchronous evaluation of fitness value}
 
-The solution must allow to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This type of environment also fits perfectly to cloud computing solutions, as fitness evaluation is entirely isolated from the rest of application.
+The solution must allow to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This feature will make great impact in case of cloud computing solutions, as fitness evaluation may be entirely isolated from the rest of application.
 \medbreak
 
 \item \label{freq:generic} \textbf{Generic representation of individual}
