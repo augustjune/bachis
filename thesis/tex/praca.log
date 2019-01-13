@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  12 JAN 2019 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  13 JAN 2019 18:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1095,6 +1095,27 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@ppsavesec=\count157
 \c@@ppsaveapp=\count158
 )
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count159
+\U@D=\dimen196
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count160
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
 (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 
@@ -1107,11 +1128,11 @@ Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count159
+\FV@CodeLineNo=\count161
 \FV@InFile=\read2
 \FV@TabBox=\box51
-\c@FancyVerbLine=\count160
-\FV@StepNumber=\count161
+\c@FancyVerbLine=\count162
+\FV@StepNumber=\count163
 \FV@OutFile=\write5
 )
 (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
@@ -1276,41 +1297,41 @@ Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count162
+\linenopenalty=\count164
 \output=\toks50
-\linenoprevgraf=\count163
-\linenumbersep=\dimen196
-\linenumberwidth=\dimen197
-\c@linenumber=\count164
-\c@pagewiselinenumber=\count165
-\c@LN@truepage=\count166
-\c@internallinenumber=\count167
-\c@internallinenumbers=\count168
-\quotelinenumbersep=\dimen198
-\bframerule=\dimen199
-\bframesep=\dimen256
+\linenoprevgraf=\count165
+\linenumbersep=\dimen197
+\linenumberwidth=\dimen198
+\c@linenumber=\count166
+\c@pagewiselinenumber=\count167
+\c@LN@truepage=\count168
+\c@internallinenumber=\count169
+\c@internallinenumbers=\count170
+\quotelinenumbersep=\dimen199
+\bframerule=\dimen256
+\bframesep=\dimen257
 \bframebox=\box52
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count169
-\c@FV@TrueTabCounter=\count170
+\c@FV@TrueTabGroupLevel=\count171
+\c@FV@TrueTabCounter=\count172
 \FV@TabBox@Group=\box53
 \FV@TmpLength=\skip63
-\c@FV@HighlightLinesStart=\count171
-\c@FV@HighlightLinesStop=\count172
-\FV@LoopCount=\count173
+\c@FV@HighlightLinesStart=\count173
+\c@FV@HighlightLinesStop=\count174
+\FV@LoopCount=\count175
 \FV@NCharsBox=\box54
-\FV@BreakIndent=\dimen257
-\FV@BreakIndentNChars=\count174
-\FV@BreakSymbolSepLeft=\dimen258
-\FV@BreakSymbolSepLeftNChars=\count175
-\FV@BreakSymbolSepRight=\dimen259
-\FV@BreakSymbolSepRightNChars=\count176
-\FV@BreakSymbolIndentLeft=\dimen260
-\FV@BreakSymbolIndentLeftNChars=\count177
-\FV@BreakSymbolIndentRight=\dimen261
-\FV@BreakSymbolIndentRightNChars=\count178
-\c@FancyVerbLineBreakLast=\count179
+\FV@BreakIndent=\dimen258
+\FV@BreakIndentNChars=\count176
+\FV@BreakSymbolSepLeft=\dimen259
+\FV@BreakSymbolSepLeftNChars=\count177
+\FV@BreakSymbolSepRight=\dimen260
+\FV@BreakSymbolSepRightNChars=\count178
+\FV@BreakSymbolIndentLeft=\dimen261
+\FV@BreakSymbolIndentLeftNChars=\count179
+\FV@BreakSymbolIndentRight=\dimen262
+\FV@BreakSymbolIndentRightNChars=\count180
+\c@FancyVerbLineBreakLast=\count181
 \FV@LineBox=\box55
 \FV@LineIndentBox=\box56
 )
@@ -1332,18 +1353,18 @@ runsystem(rm -- "praca.w18")...executed.
 ) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip64
-\fb@frw=\dimen262
-\fb@frh=\dimen263
-\FrameRule=\dimen264
-\FrameSep=\dimen265
+\fb@frw=\dimen263
+\fb@frh=\dimen264
+\FrameRule=\dimen265
+\FrameSep=\dimen266
 )
 \minted@appexistsfile=\read3
 \minted@bgbox=\box57
 \minted@code=\write6
-\c@minted@FancyVerbLineTemp=\count180
-\c@minted@pygmentizecounter=\count181
+\c@minted@FancyVerbLineTemp=\count182
+\c@minted@pygmentizecounter=\count183
 \@float@every@listing=\toks51
-\c@listing=\count182
+\c@listing=\count184
 )
 runsystem(mkdir -p _minted-praca)...executed.
 
@@ -1353,7 +1374,7 @@ Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count183
+\c@lips@count=\count185
 )
 runsystem(which pygmentize && touch praca.aex)...executed.
 
@@ -1388,16 +1409,16 @@ LaTeX Font Info:    ... okay on input line 53.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count184
-\scratchdimen=\dimen266
+\scratchcounter=\count186
+\scratchdimen=\dimen267
 \scratchbox=\box58
-\nofMPsegments=\count185
-\nofMParguments=\count186
+\nofMPsegments=\count187
+\nofMParguments=\count188
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count187
-\MPscratchDim=\dimen267
-\MPnumerator=\count188
-\makeMPintoPDFobject=\count189
+\MPscratchCnt=\count189
+\MPscratchDim=\dimen268
+\MPnumerator=\count190
+\makeMPintoPDFobject=\count191
 \everyMPtoPDFconversion=\toks53
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1474,7 +1495,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count190
+\c@section@level=\count192
 )
 LaTeX Info: Redefining \ref on input line 53.
 LaTeX Info: Redefining \pageref on input line 53.
@@ -1484,12 +1505,44 @@ LaTeX Info: Redefining \nameref on input line 53.
 \@outlinefile=\write7
 \openout7 = `praca.out'.
 
- (./praca.toc
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(136.5733pt, 375.57631pt, 85.35826pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=375.57631pt
+* \textheight=702.78308pt
+* \oddsidemargin=64.30331pt
+* \evensidemargin=64.30331pt
+* \topmargin=-32.1381pt
+* \headheight=14.5pt
+* \headsep=16.5pt
+* \topskip=12.0pt
+* \footskip=29.0pt
+* \marginparwidth=0.0pt
+* \marginparsep=0.0pt
+* \columnsep=25.6802pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+LaTeX Font Info:    Try loading font information for U+msa on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1497,24 +1550,36 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+LaTeX Font Info:    Try loading font information for U+msb on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
-\tf@toc=\write8
-\openout8 = `praca.toc'.
+)
+Overfull \vbox (3.72298pt too high) detected at line 55
+ []
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./praca.toc
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./praca.lof
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 8.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+
+])
+\tf@toc=\write8
+\openout8 = `praca.toc'.
+
+
+[2] (./praca.lof
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1525,54 +1590,59 @@ Package microtype Info: Loading generic protrusion settings for font family
 \tf@lof=\write9
 \openout9 = `praca.lof'.
 
- [2
+
+[3
 
 ] (./praca.lop)
 \tf@lop=\write10
 \openout10 = `praca.lop'.
 
-
-[3
+ [4
 
 ] (./praca.lot)
 \tf@lot=\write11
 \openout11 = `praca.lot'.
 
- (./chapter1.tex [4
+ [5
+
+] (./abstract.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6
 
 ]
-Rozdzia\PlPrIeC {\l } 1.
-[5
+(./chapter1.tex [7]
+Chapter 1.
+[8
 
-] [6]
-Overfull \hbox (12.9592pt too wide) in paragraph at lines 38--39
-[]\T1/qtm/m/n/12 (-20) A so-lu-tion for de-scri-bed flaws wo-uld be a to-ol, wh
-ich al-lows to in-te-gra-te a high-performance
+] [9] [10]
+Overfull \hbox (12.9592pt too wide) in paragraph at lines 49--50
+[]\T1/qtm/m/n/12 (-20) A so-lu-tion for de-scribed flaws would be a tool, which
+ al-lows to in-te-grate a high-performance
  []
 
-[7]
+[11]
 Underfull \vbox (badness 1715) has occurred while \output is active []
 
- [8]
-[9]) (./chapter2.tex [10]
-Rozdzia\PlPrIeC {\l } 2.
-[11
+ [12]
+[13]) (./chapter2.tex [14]
+Chapter 2.
+[15
 
-]) (./chapter3.tex [12]
-Rozdzia\PlPrIeC {\l } 3.
-(./ch3/implementation_overview.tex [13
+]) (./chapter3.tex [16]
+Chapter 3.
+(./ch3/implementation_overview.tex [17
 
-] [14]
-<img/spark-runtime-split.png, id=313, 190.20755pt x 151.85568pt>
+] [18]
+Underfull \vbox (badness 2680) has occurred while \output is active []
+
+ [19]
+<img/spark-runtime-split.png, id=376, 190.20755pt x 151.85568pt>
 File: img/spark-runtime-split.png Graphic file (type png)
 <use img/spark-runtime-split.png>
 Package pdftex.def Info: img/spark-runtime-split.png  used on input line 52.
 (pdftex.def)             Requested size: 256.07741pt x 204.46336pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-<img/spark_persistence_levels.png, id=319, 1101.11375pt x 495.8525pt>
+<img/spark_persistence_levels.png, id=378, 1101.11375pt x 495.8525pt>
 File: img/spark_persistence_levels.png Graphic file (type png)
 <use img/spark_persistence_levels.png>
 Package pdftex.def Info: img/spark_persistence_levels.png  used on input line 5
@@ -1580,14 +1650,14 @@ Package pdftex.def Info: img/spark_persistence_levels.png  used on input line 5
 (pdftex.def)             Requested size: 384.1096pt x 172.96838pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 61--61
- []\T1/qtm/m/n/10.95 (+20) Pic. 3.2.[] Per-si-sten-ce le-vels from \T1/cmtt/m/n
-/10.95 org.apache.spark.storage.StorageLevel \T1/qtm/m/n/10.95 (+20) and 
+ []\T1/qtm/m/n/10.95 (+20) Figure 3.2.[] Per-sis-tence lev-els from \T1/cmtt/m/
+n/10.95 org.apache.spark.storage.StorageLevel \T1/qtm/m/n/10.95 (+20) and 
  []
 
 
-Underfull \vbox (badness 1062) has occurred while \output is active []
+Underfull \vbox (badness 1057) has occurred while \output is active []
 
- [16pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
@@ -1600,11 +1670,10 @@ l.65
                                                   
 l.65 
       <./img/spark-runtime-split.png> <./img/spark_persistence_levels.png>]
-[17]
-Underfull \vbox (badness 1742) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19] [20]
+ [21]
+[22] [23] [24]
 \openout5 = `praca.pyg'.
 
  (./_minted-praca/default-pyg-prefix.pygstyle)
@@ -1622,45 +1691,42 @@ t line 187.
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
 (Font)              using `T1/cmtt/m/n' instead on input line 2.
 
-) [21] [22]
-<img/diagrams/alleles-top-packages.png, id=369, 1405.25pt x 822.07124pt>
+) [25] [26] [27]
+<img/diagrams/alleles-top-packages.png, id=434, 1405.25pt x 822.07124pt>
 File: img/diagrams/alleles-top-packages.png Graphic file (type png)
 <use img/diagrams/alleles-top-packages.png>
 Package pdftex.def Info: img/diagrams/alleles-top-packages.png  used on input l
-ine 288.
+ine 285.
 (pdftex.def)             Requested size: 426.79135pt x 249.6714pt.
- [23]
-<img/diagrams/alleles-genotype.png, id=377, 1386.17876pt x 512.91624pt>
+<img/diagrams/alleles-genotype.png, id=437, 1386.17876pt x 512.91624pt>
 File: img/diagrams/alleles-genotype.png Graphic file (type png)
 <use img/diagrams/alleles-genotype.png>
 Package pdftex.def Info: img/diagrams/alleles-genotype.png  used on input line 
-295.
+292.
 (pdftex.def)             Requested size: 426.79135pt x 157.92233pt.
- [24pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-3}) has been already used, duplicate ignored
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.300 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3.4}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.300 
-       <./img/diagrams/alleles-top-packages.png> <./img/diagrams/alleles-genoty
-pe.png>]
-<img/diagrams/alleles-project-structure.png, id=386, 463.7325pt x 884.30376pt>
+l.298 ...functional requirement \ref{nfreq:modul}}
+                                                   <./img/diagrams/alleles-top-
+packages.png>]
+<img/diagrams/alleles-project-structure.png, id=445, 463.7325pt x 884.30376pt>
 File: img/diagrams/alleles-project-structure.png Graphic file (type png)
 <use img/diagrams/alleles-project-structure.png>
 Package pdftex.def Info: img/diagrams/alleles-project-structure.png  used on in
-put line 304.
+put line 301.
 (pdftex.def)             Requested size: 298.75264pt x 569.70364pt.
-<img/diagrams/alleles-genetic-class.png, id=388, 1632.0975pt x 972.63374pt>
+<img/diagrams/alleles-genetic-class.png, id=447, 1632.0975pt x 972.63374pt>
 File: img/diagrams/alleles-genetic-class.png Graphic file (type png)
 <use img/diagrams/alleles-genetic-class.png>
 Package pdftex.def Info: img/diagrams/alleles-genetic-class.png  used on input 
-line 312.
+line 309.
 (pdftex.def)             Requested size: 426.79135pt x 254.33324pt.
 ) (./ch3/usage.tex
 Overfull \hbox (68.38347pt too wide) in paragraph at lines 21--22
@@ -1668,26 +1734,33 @@ Overfull \hbox (68.38347pt too wide) in paragraph at lines 21--22
 onOptions[T]):
  []
 
-[25] [26pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.3.5}) has been already used, duplicate ignored
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.45 	\item \texttt
-                   {def nextGeneration[T: Join : Modification](ratedPop: Pop...
- <./img/diagrams/alleles-project-structure.png>]
+l.24 	\end{itemize}
+                    <./img/diagrams/alleles-genotype.png>] [30pdfTeX warning (e
+xt4): destination with the same identifier (name{figure.3.5}) has been already 
+used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.24 	\end{itemize}
+                    <./img/diagrams/alleles-project-structure.png>]
 Overfull \hbox (62.20998pt too wide) in paragraph at lines 45--46
 []\T1/cmtt/m/n/12 def nextGeneration[T: Join : Modification](ratedPop: Populati
 on[Rated[T]],
  []
 
-[27pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.87 	\item \texttt
-                   {def create: T} <./img/diagrams/alleles-genetic-class.png>]
+l.65 	R
+       eturns a cached version of this fitness function <./img/diagrams/alleles
+-genetic-class.png>]
 Overfull \hbox (18.99553pt too wide) in paragraph at lines 99--100
 []\T1/cmtt/m/n/12 def generation[T](population: Population[Rated[T]]): Populati
 on[(T,
@@ -1705,144 +1778,220 @@ Overfull \hbox (59.12323pt too wide) in paragraph at lines 123--124
 opulation[T] 
  []
 
-) (./ch3/meeting_requirements.tex)) (./chapter4.tex [28]
-Rozdzia\PlPrIeC {\l } 4.
+) (./ch3/meeting_requirements.tex)) (./chapter4.tex [32]
+Chapter 4.
+[33
+
+]
+<img/exp/1/cpu-500.png, id=475, 1540.75626pt x 341.275pt>
+File: img/exp/1/cpu-500.png Graphic file (type png)
+<use img/exp/1/cpu-500.png>
+Package pdftex.def Info: img/exp/1/cpu-500.png  used on input line 77.
+(pdftex.def)             Requested size: 426.79135pt x 94.53047pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[29
+<img/exp/1/cpu-5000.png, id=477, 1642.135pt x 341.275pt>
+File: img/exp/1/cpu-5000.png Graphic file (type png)
+<use img/exp/1/cpu-5000.png>
+Package pdftex.def Info: img/exp/1/cpu-5000.png  used on input line 84.
+(pdftex.def)             Requested size: 426.79135pt x 88.69295pt.
 
-]
-<img/exp/1/cpu-500.png, id=416, 1540.75626pt x 341.275pt>
-File: img/exp/1/cpu-500.png Graphic file (type png)
-<use img/exp/1/cpu-500.png>
-Package pdftex.def Info: img/exp/1/cpu-500.png  used on input line 75.
-(pdftex.def)             Requested size: 426.79135pt x 94.53047pt.
- [30pdfTeX warning (ext4): destination with the same identifier (name{table.4.1
-}) has been already used, duplicate ignored
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[34pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}
+) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.80 
+l.89 
      pdfTeX warning (ext4): destination with the same identifier (name{table.4.
 2}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.80 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.1}) has been already used, duplicate ignored
+l.89 
+     ] [35pdfTeX warning (ext4): destination with the same identifier (name{fig
+ure.4.1}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.80 
-      <./img/exp/1/cpu-500.png>]
-<img/exp/1/cpu-5000.png, id=423, 1642.135pt x 341.275pt>
-File: img/exp/1/cpu-5000.png Graphic file (type png)
-<use img/exp/1/cpu-5000.png>
-Package pdftex.def Info: img/exp/1/cpu-5000.png  used on input line 82.
-(pdftex.def)             Requested size: 426.79135pt x 88.69295pt.
+l.113 \end{table}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{figure.4.2}) has been already used, duplicate ignored
 
-Overfull \hbox (51.63257pt too wide) in paragraph at lines 111--126
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.113 \end{table}
+                  <./img/exp/1/cpu-500.png> <./img/exp/1/cpu-5000.png>]
+Overfull \hbox (51.63257pt too wide) in paragraph at lines 117--132
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/exp/2/ubuntu-performance-increase.jpeg, id=427, 751.80875pt x 442.65375pt>
+<img/exp/2/ubuntu-performance-increase.jpeg, id=491, 751.80875pt x 442.65375pt>
 
 File: img/exp/2/ubuntu-performance-increase.jpeg Graphic file (type jpg)
 <use img/exp/2/ubuntu-performance-increase.jpeg>
 Package pdftex.def Info: img/exp/2/ubuntu-performance-increase.jpeg  used on in
-put line 129.
+put line 135.
 (pdftex.def)             Requested size: 341.43437pt x 201.03627pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (51.63257pt too wide) in paragraph at lines 135--154
+Overfull \hbox (51.63257pt too wide) in paragraph at lines 141--160
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/exp/2/windows-performance-increase.jpeg, id=428, 743.77875pt x 446.66875pt
+<img/exp/2/windows-performance-increase.jpeg, id=492, 743.77875pt x 446.66875pt
 >
 File: img/exp/2/windows-performance-increase.jpeg Graphic file (type jpg)
 <use img/exp/2/windows-performance-increase.jpeg>
 Package pdftex.def Info: img/exp/2/windows-performance-increase.jpeg  used on i
-nput line 157.
+nput line 163.
 (pdftex.def)             Requested size: 341.43437pt x 205.04755pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [31pdfTeX warning (ext4): destination with the same identifier (name{figure.4
-.2}) has been already used, duplicate ignored
+<img/exp/2/limit-threadpool-2.png, id=500, 650.43pt x 282.05376pt>
+File: img/exp/2/limit-threadpool-2.png Graphic file (type png)
+<use img/exp/2/limit-threadpool-2.png>
+Package pdftex.def Info: img/exp/2/limit-threadpool-2.png  used on input line 1
+74.
+(pdftex.def)             Requested size: 341.43437pt x 148.06322pt.
 
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.109 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.4
-.3}) has been already used, duplicate ignored
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.109 
-       <./img/exp/1/cpu-5000.png>] (./praca.bbl [32pdfTeX warning (ext4): desti
-nation with the same identifier (name{table.4.4}) has been already used, duplic
-ate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.1 \begin{thebibliography}{1}
-                              pdfTeX warning (ext4): destination with the same 
-identifier (name{figure.4.3}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.1 \begin{thebibliography}{1}
-                               <./img/exp/2/ubuntu-performance-increase.jpeg>]
-[33pdfTeX warning (ext4): destination with the same identifier (name{table.4.5}
+<img/exp/2/limit-threadpool-4.png, id=501, 493.845pt x 295.1025pt>
+File: img/exp/2/limit-threadpool-4.png Graphic file (type png)
+<use img/exp/2/limit-threadpool-4.png>
+Package pdftex.def Info: img/exp/2/limit-threadpool-4.png  used on input line 1
+80.
+(pdftex.def)             Requested size: 341.43437pt x 204.02618pt.
+[36pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}
 ) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1 \begin{thebibliography}{1}
-                              pdfTeX warning (ext4): destination with the same 
-identifier (name{figure.4.4}) has been already used, duplicate ignored
+l.182 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.4.4}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.1 \begin{thebibliography}{1}
-                               <./img/exp/2/windows-performance-increase.jpeg>]
-) [34
+l.182 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{figure.4.3}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.182 \end{figure}
+                   <./img/exp/2/ubuntu-performance-increase.jpeg>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/exp/2/limit-threadpool-8.png, id=509, 555.07375pt x 296.10625pt>
+File: img/exp/2/limit-threadpool-8.png Graphic file (type png)
+<use img/exp/2/limit-threadpool-8.png>
+Package pdftex.def Info: img/exp/2/limit-threadpool-8.png  used on input line 1
+86.
+(pdftex.def)             Requested size: 341.43437pt x 182.14265pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/exp/2/limit-threadpool-16.png, id=510, 506.89375pt x 296.10625pt>
+File: img/exp/2/limit-threadpool-16.png Graphic file (type png)
+<use img/exp/2/limit-threadpool-16.png>
+Package pdftex.def Info: img/exp/2/limit-threadpool-16.png  used on input line 
+192.
+(pdftex.def)             Requested size: 341.43437pt x 199.45644pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/exp/2/limit-threadpool-32.png, id=511, 410.53375pt x 299.1175pt>
+File: img/exp/2/limit-threadpool-32.png Graphic file (type png)
+<use img/exp/2/limit-threadpool-32.png>
+Package pdftex.def Info: img/exp/2/limit-threadpool-32.png  used on input line 
+198.
+(pdftex.def)             Requested size: 341.43437pt x 248.76952pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [37pdfTeX warning (ext4): destination with the same identifier (name{table.4.
+5}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.104 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.4}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.104 
+       <./img/exp/2/windows-performance-increase.jpeg>] (./conclusions.tex
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1 \chapter*{Conclusions}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.6}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1 \chapter*{Conclusions}
+                           <./img/exp/2/limit-threadpool-2.png> <./img/exp/2/li
+mit-threadpool-4.png>] [39pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.7}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1 \chapter*{Conclusions}
+                          pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.4.8}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1 \chapter*{Conclusions}
+                           <./img/exp/2/limit-threadpool-8.png> <./img/exp/2/li
+mit-threadpool-16.png>] [40pdfTeX warning (ext4): destination with the same ide
+ntifier (name{figure.4.9}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.1 \chapter*{Conclusions}
+                           <./img/exp/2/limit-threadpool-32.png>]) (./praca.bbl
+[41
+
+]) [42
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
  (./praca.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 377C305569B9205E9FE47346ACDC6CD9;2080.
+(rerunfilecheck)             Checksum: E31228FA6F90EA50D71CDDEF32299294;2394.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
 runsystem(rm praca.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 25081 strings out of 492982
- 456973 string characters out of 6134895
- 752906 words of memory out of 5000000
- 27841 multiletter control sequences out of 15000+600000
- 48112 words of font info for 121 fonts, out of 8000000 for 9000
+ 25713 strings out of 492982
+ 466904 string characters out of 6134895
+ 846053 words of memory out of 5000000
+ 28417 multiletter control sequences out of 15000+600000
+ 62860 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,62p,1558b,819s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,14n,62p,1558b,1611s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/
 fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
@@ -1851,10 +2000,10 @@ msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 re/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/pub
 lic/tex-gyre/qtmri.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.p
 fb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on praca.pdf (34 pages, 721694 bytes).
+Output written on praca.pdf (43 pages, 893111 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 17727 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 526 compressed objects within 6 object streams
+ 135 named destinations out of 1000 (max. 500000)
+ 23432 words of extra memory for PDF output out of 24883 (max. 10000000)
 

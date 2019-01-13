@@ -149,11 +149,11 @@ This is a list of core components of demonstrated solution. It contains also a d
 \item
 Individual
 
-An individual is a core component of genetic algorithm, often also referred to as a \textit{genotype, chromosome \emph{or} a candidate}, which represents a candidate solution to a given problem. The number of individuals are evolved during the algorithm workflow, mixed and mutated in order to find the fittest one according to provided fitness function. This concept is purely abstract in the library, encoded as a generic type which may have an arbitrary representation defined by the users depending on their needs. 
+An individual is a core component of genetic algorithm, often also referred to as a \textit{genotype, chromosome \emph{or} a candidate}, which represents a candidate solution to a given problem. The number of individuals are evolved during the algorithm workflow, mixed and mutated in order to find the fittest one according to provided fitness function. This concept is purely abstract in the library, encoded as a generic type which may have an arbitrary representation defined by users depending on their needs. 
 
 In order to handle an individual through the process of evolution there should be defined a set of operators, where each encapsulates logic of some part of evolution procedure. 
 
-Each operation is implemented as a \textbf{type class}. A type class is a type system construct, that supports ad hoc polymorphism. This type of polymorphism is available in Scala, using the idea of \textit{implicit parameters}. Generally a type class is notated as type \texttt{T[A]}, where generic \texttt{T[]} is a type class and \texttt{A} is a parameter type. On the higher level of analysis, an instance of such type class may be considered as mathematical proof, for every value \texttt{a: A} to be capable of functionality declared in type class definition. The advantages of this approach over other kinds of polymorphism (both parametric and subtyping) comes with possibility of usage of multiple instances of the same type class, where the behavior of value \texttt{a} may be different, without a change to \texttt{A} implementation.
+Each operation is implemented as a \textbf{type class}. A type class is a type system construct, that supports ad hoc polymorphism, widely used in functional programming paradigm. This type of polymorphism is available in Scala, using the idea of \textit{implicit parameters}. Generally a type class is notated as type \texttt{T[A]}, where generic \texttt{T[]} is a type class and \texttt{A} is a parameter type. On the higher level of analysis, an instance of such type class may be considered as mathematical proof, for every value \texttt{a: A} to be capable of functionality declared in type class definition. The advantages of this approach over other kinds of polymorphism (both parametric and subtyping) comes with possibility of usage of multiple instances of the same type class, where the behavior of value \texttt{a} may be different, without a change to \texttt{A} implementation.
 \medbreak
 
 \begin{itemize}
@@ -162,8 +162,8 @@ Fitness
 
 Fitness is a type class which represents a function of type \texttt{I => Double}, where \texttt{I} is type of individual. This function summarizes how close a given design solution is to achieving the set aims. A fitness function must be devised for each problem to be solved, thus should be provided by the user and may not be preimplemented. Fitness function value is main criterion of future selection and is very important attribute of individual representation.
 
-\textit{ToDo - how much does it cost}
-\medbreak
+Very often genetic algorithm's computational complexity heavily depends on fitness function evaluation. This may be the bottleneck of the algorithm and thus a lot of effort is usually taken to optimize this function. Parallelization is one of the solutions to decrease computation time.
+\medbreak	
 
 \item
 Join
@@ -267,9 +267,6 @@ Fitness caching is implemented using decorator design pattern over the provided 
 \smallskip\textit{This satisfies predefined functional requirement \ref{freq:cache}}
  
 \medbreak
-
-%\item Genetic operators
-%\textit{ToDo - add description}
 
 \end{itemize}
 

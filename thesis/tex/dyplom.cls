@@ -671,14 +671,14 @@
 \@wydzial
 
 \vspace{0.15ex}
-Kierunek studiów: \@kierunek
+Field of study: \@kierunek
 
 %		Specjalność: \@specjalnosc\\
 \text{}
 \end{flushleft}
 \begin{minipage}[t][0.46\textheight]{\textwidth}
 \begin{center}
-\large Praca dyplomowa -- %
+\large Bachelor Thesis -- %
 \if@inzynier inżynierska \fi%
 \if@magister magisterska \fi \\
 \vspace{0cm plus .5fill}
@@ -695,7 +695,7 @@ Kierunek studiów: \@kierunek
 \vspace{0.1cm plus .2fill}
 \begin{flushright}
 \small
-słowa kluczowe:\\[0.8ex]
+Keywords:\\[0.8ex]
 \begin{minipage}{7cm}
 \StrLen{\@slowakluczowe}[\kluczowedlugosc]
 \ifthenelse{\kluczowedlugosc > \dlugoscmaxc}{
@@ -708,7 +708,7 @@ słowa kluczowe:\\[0.8ex]
 \end{flushright}
 \vspace{0.07cm plus 0.2fill}
 		\begin{flushleft}
-			\small krótkie streszczenie:\\[.8ex]
+			\small Short summary:\\[.8ex]
 			\StrLen{\@krotkiestreszczenie}[\streszczeniedlugosc]
 			\ifthenelse{\streszczeniedlugosc > \dlugoscmaxb}{
 				\parbox{\textwidth}{
@@ -733,7 +733,7 @@ słowa kluczowe:\\[0.8ex]
 \begin{minipage}[b][0.33\textheight]{\textwidth}
 \begin{tabular}{|P{2.35cm}|P{6cm}|C{1.15cm}|C{1.9cm}|}
 \hline
-\multirow{2}{2.35cm}[.1em]{\scriptsize Opiekun pracy dyplomowej} 
+\multirow{2}{2.35cm}[.1em]{\scriptsize Supervisor} 
 &  
 \StrLen{\@promotor}[\opiekundlugosc]
 \ifthenelse{\opiekundlugosc > \dlugoscmaxf}{
@@ -757,11 +757,11 @@ słowa kluczowe:\\[0.8ex]
 &
 \vspace{-6pt}\dotline[3pt]{51pt}
 \\ \cline{2-4} 
-&  \scriptsize Tytuł/stopień naukowy/imię i nazwisko
-&  \scriptsize ocena             
-&  \scriptsize podpis                    
+&  \scriptsize Title/ degree/ name and surname
+&  \scriptsize grade         
+&  \scriptsize signature                    
 \\ \hline
-\multicolumn{4}{|c|}{\footnotesize Ostateczna ocena za pracę dyplomową}
+\multicolumn{4}{|c|}{\footnotesize The final evaluation of the thesis}
 \\ \hline
 \multirow{2}{2.35cm}[.2em]{\scriptsize Przewodniczący Komisji egzaminu dyplomowego} 
 &  
@@ -787,9 +787,9 @@ słowa kluczowe:\\[0.8ex]
 &
 \vspace{-6pt}\dotline[3pt]{51pt}
 \\ \cline{2-4} 
-&  \scriptsize Tytuł/stopień naukowy/imię i nazwisko
-&  \scriptsize ocena             
-&  \scriptsize podpis                    
+&  \scriptsize Title/ degree/ name and surname
+&  \scriptsize grade             
+&  \scriptsize signature                    
 \\ \hline
 
 \end{tabular}
@@ -798,19 +798,19 @@ słowa kluczowe:\\[0.8ex]
 \emph{
 \footnotesize
 \begin{flushleft}
-Do celów archiwalnych pracę dyplomową zakwalifikowano do:*
+For the purposes of archival thesis qualified to:*
 \vspace{-1ex}
 \begin{enumerate}
 \itemsep0em 
-\item[a)] kategorii A (akta wieczyste)
-\item[b)] kategorii BE 50 (po 50 latach podlegające ekspertyzie)
+\item[a)] Category A (perpetual files)
+\item[b)] Category BE 50 (subject to expertise after 50 years)
 \end{enumerate}
 \vspace{-1ex}
-* niepotrzebne skreślić
+* Delete as appropriate
 \end{flushleft}
 }
 \begin{flushright}
-\boxed{~~~\textrm{pieczątka wydziałowa}~~~}
+\boxed{~~~\textrm{stamp of the faculty}~~~}
 \end{flushright}
 \vspace{0cm}
 \begin{center}

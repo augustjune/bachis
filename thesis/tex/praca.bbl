@@ -1,13 +1,24 @@
 \begin{thebibliography}{1}
 
-\bibitem{creative_ga}
-Bentley, P., Corne, D., Engineering~Information, I., Boden, M., \emph{Creative
-  Evolutionary Systems}, Evolutionary Computation Series (Elsevier Science,
-  2002).
+\bibitem{stream_refs}
+{Akka team}, \emph{Streamrefs - reactive streams over the network},
+  \url{https://doc.akka.io/docs/akka/2.5/stream/stream-refs.html}.
+
+\bibitem{apache_genetics}
+{Apache Foundation team}, \emph{Streamrefs - reactive streams over the
+  network},
+  \url{http://commons.apache.org/proper/commons-math/userguide/genetics.html}.
+
+\bibitem{jenetics_manual}
+{Franz Wilhelmstötter}, \emph{Jenetics. Library user's manual}.
 
 \bibitem{learning_spark}
 Karau, H., Konwinski, A., Wendell, P., Zaharia, M., \emph{Learning Spark:
   Lightning-Fast Big Data Analytics}, 1st wyd. (O'Reilly Media, Inc., 2015).
+
+\bibitem{introduction_to_ga}
+Mitchell, M., \emph{An Introduction to Genetic Algorithms} (MIT Press,
+  Cambridge, MA, USA, 1996).
 
 \bibitem{programming_in_scala}
 Odersky, M., Spoon, L., Venners, B., \emph{Programming in Scala: Updated for
@@ -21,20 +32,5 @@ Prokopec, A., Bronson, N.G., Bagwell, P., Odersky, M., \emph{Concurrent tries
 \bibitem{scala_parallel_collections_overview}
 Prokopec, A., Miller, H., \emph{Parallel collections overview},
   \url{https://docs.scala-lang.org/overviews/parallel-collections/overview.html}.
-
-\bibitem{introduction_to_ga}
-Sivanandam, S.N., Deepa, S.N., \emph{Introduction to Genetic Algorithms}, 1st
-  wyd. (Springer Publishing Company, Incorporated, 2007).
-
-\bibitem{stream_refs}
-team, A., \emph{Streamrefs - reactive streams over the network},
-  \url{https://doc.akka.io/docs/akka/2.5/stream/stream-refs.html}.
-
-\bibitem{apache_genetics}
-team, A.F., \emph{Streamrefs - reactive streams over the network},
-  \url{http://commons.apache.org/proper/commons-math/userguide/genetics.html}.
-
-\bibitem{jenetics_manual}
-Wilhelmstötter, F., \emph{Jenetics. Library user's manual}.
 
 \end{thebibliography}

@@ -1,15 +1,15 @@
 # Fdb version 3
-["pdflatex"] 1547052984 "/home/jura/Projects/jslinkin/bachis/thesis/tex/chapter1.tex" "/home/jura/Projects/jslinkin/bachis/thesis/tex/chapter1.pdf" "chapter1" 1547052984
+["pdflatex"] 1547308334 "chapter1.tex" "/home/jura/Projects/jslinkin/bachis/thesis/tex/chapter1.pdf" "chapter1" 1547308334
   "/etc/texmf/web2c/texmf.cnf" 1535351464 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jura/Projects/jslinkin/bachis/thesis/tex/chapter1.aux" 1547052803 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/home/jura/Projects/jslinkin/bachis/thesis/tex/chapter1.tex" 1547052959 4549 f3964813e1a7ce9169aaabc04d8e60c7 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1480098701 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1539323613 4128032 bad6e5abd7d0da1178af6fb675ee81d8 ""
-  "chapter1.tex" 1547052959 4549 f3964813e1a7ce9169aaabc04d8e60c7 ""
+  "chapter1.tex" 1547288709 15580 6433da5cde801327a309a21d2711ffbb ""
   (generated)
   "/home/jura/Projects/jslinkin/bachis/thesis/tex/chapter1.pdf"
-  "chapter1.log"
   "/home/jura/Projects/jslinkin/bachis/thesis/tex/chapter1.log"
+  "chapter1.log"

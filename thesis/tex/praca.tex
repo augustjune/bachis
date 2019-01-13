@@ -5,6 +5,7 @@
 \usepackage[toc]{appendix}
 \renewcommand{\appendixtocname}{Dodatki}
 \renewcommand{\appendixpagename}{Dodatki}
+\usepackage[english]{babel}
 
 % pakiet do składu listingów w razie potrzeby można odblokować możliwość numerowania linii lub zmienić wielkość czcionki w listingu
 \usepackage{minted}
@@ -40,40 +41,38 @@ fontsize=\small,
 \usepackage{lipsum}
 
 % Dane o pracy
-\author{Anna Nowak}
-\title{Kot Ali a Docker}
-\titlen{The Ala's cat and the Docker}
-\promotor{dr inż. Wojciech Thomas}
+\author{Yuriy Slinkin}
+\title{Evolutionary methods efficiency optimization using distributed systems}
+\promotor{dr inż. Michał Przewoźniczek}
 %\konsultant{dr hab. inż. Kazimerz Kabacki}
-\wydzial{Wydział Informatyki i Zarządzania}
-\kierunek{Informatyka}
-\krotkiestreszczenie{W pracy przedstawiono projekt aplikacji służącej do komunikacji z kosmitami, wykorzystujący framework SpaceDirect i bazę danych NoMySQL}
-\slowakluczowe{kosmici, NoMySQL, SpaceDirect, aplikacja mobilna}
+\wydzial{Faculty of Computer Science and Management}
+\kierunek{Computer Science}
+\krotkiestreszczenie{This theses presents an optimization of genetic algorithms using parallelization and distributed computing, bounded in programming library.}
+\slowakluczowe{evolutionary algorithms, genetic algorithm, optimization, distributed computing, parallelization}
 
 \begin{document}
 
-%\maketitle
+\maketitle
 
 \tableofcontents
 
 \listoffigures
 
-\listof{listing}{Spis listingów}
+\listof{listing}{List of listings}
 
 \listoftables
 
-% --- Strona ze streszczeniem i abstraktem ------------------------------------------------------------------
-\iffalse
-\chapter*{Streszczenie} % po polsku
-% Wprowadzenie
-Celem pracy było opracowanie aplikacji służącej do komunikacji z kosmitami. Dostępne na rynku aplikacj e nie satysfakcjonowały autorki ze względu na brak istotnych funkcji takich jak obsługa przez telefon z systemem Android.
-% Sposób rozwiązania problemu
-W ramach pracy przygotowano aplikację komunikacyjną wykorzystującą framework SpaceDirect, przechowującą dane kontaktów w bazie danych MyNoSQL oraz udostępniającą swoje funkcje przez interfejs REST API.
-% Dodatkowe informacji o pracy
-Oprócz projektu aplikacji praca zawiera wyniki testów jednostkowych oraz testów użyteczności przeprowadzonych przez krewnych i znajomych królika.
-% Podsumowanie
-Przygotowana w ramach projektu inżynierskiego praca może zostać wykorzystana przez wszystkie osoby zainteresowane kontaktami z cywilizacjami pozaziemskimi.
+%\pagebreak
 
+% --- Strona ze streszczeniem i abstraktem ------------------------------------------------------------------
+
+\chapter*{Abstract}
+
+Nowadays artificial intelligence (AI) is gaining its popularity and changing more and more domains with its growth. Algorithms and heuristics are capable of some non-trivial things, that until recent time was known to be impossible for a machine. In some particular cases artificial intelligence methods perform tasks a lot better than a human being. However there are still a lot of uncovered domains, where AI is not yet as good as it could be.
+
+Evolutionary algorithms is one of the families of metaheuristic optimization algorithms. It is subset of evolutionary computation, which was inspired by biological evolution. Its goal is to find the best solution for the given fitness function, which may be non-trivial and take over a lifetime to reach the same result by checking each possible solution.
+
+The theses addresses inconveniences regarding evolutionary algorithms and purposes solution introducing the concepts of parallelism and distributed computing. It notes the importance of evolutionary algorithms, and genetic algorithms in specific, and how it may be interesting for both scholars and professional developers. 
 
 % Kilka sztuczek, żeby:
 % - Abstract pojawił się na tej samej stronie co Streszczenie
@@ -82,22 +81,18 @@ Przygotowana w ramach projektu inżynierskiego praca może zostać wykorzystana 
 \begingroup
 \renewcommand{\cleardoublepage}{}
 \renewcommand{\clearpage}{}
-\chapter*{Abstract} % ...i to samo po angielsku
-The main goal of this thesis was development of\dots (\textit{please translate remaining part of Streszczenie into English}).
+
+\input{abstract}
+
 \endgroup
 \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 % --- Koniec strony ze streszczeniem i abstraktem 
-\fi-----------------------------------------------------------
+-----------------------------------------------------------
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\cdot$}
 \renewcommand{\labelitemiii}{$\diamond$}
 \renewcommand{\labelitemiv}{$\ast$}
 
-
-% Rozdział dołączony z zewnątrz
-%\input{wstep}
-
-%\input{chapter0}
 
 \input{chapter1}
 
@@ -106,6 +101,8 @@ The main goal of this thesis was development of\dots (\textit{please translate r
 \input{chapter3}
 
 \input{chapter4}
+
+\input{conclusions}
 
 \iffalse
 
