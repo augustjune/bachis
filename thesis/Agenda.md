@@ -40,7 +40,7 @@
 
 ### Requirements
 ### API
-### Preimplemented algorithms
+### Pre-implemented algorithms
 
 ## Examples
 

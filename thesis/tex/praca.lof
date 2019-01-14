@@ -6,23 +6,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1.}{\ignorespaces The components of a distributed Spark application \cite {learning_spark}.}}{20}{figure.4.1}
+\contentsline {figure}{\numberline {4.2.}{\ignorespaces Persistence levels from \texttt {org.apache.spark.storage.StorageLevel} and \texttt {pyspark.StorageLevel} \cite {learning_spark}.}}{20}{figure.4.2}
+\contentsline {figure}{\numberline {4.3.}{\ignorespaces Packages and their source dependencies}}{28}{figure.4.3}
+\contentsline {figure}{\numberline {4.4.}{\ignorespaces Type classes used to describe an individual}}{29}{figure.4.4}
+\contentsline {figure}{\numberline {4.5.}{\ignorespaces Expanded project structure}}{30}{figure.4.5}
+\contentsline {figure}{\numberline {4.6.}{\ignorespaces Classes diagram from \textit {genetic} package}}{31}{figure.4.6}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1.}{\ignorespaces The components of a distributed Spark application \cite {learning_spark}.}}{20}{figure.3.1}
-\contentsline {figure}{\numberline {3.2.}{\ignorespaces Persistence levels from \texttt {org.apache.spark.storage.StorageLevel} and \texttt {pyspark.StorageLevel} \cite {learning_spark}.}}{20}{figure.3.2}
-\contentsline {figure}{\numberline {3.3.}{\ignorespaces Packages and their source dependencies}}{28}{figure.3.3}
-\contentsline {figure}{\numberline {3.4.}{\ignorespaces Type classes used to describe an individual}}{29}{figure.3.4}
-\contentsline {figure}{\numberline {3.5.}{\ignorespaces Expanded project structure}}{30}{figure.3.5}
-\contentsline {figure}{\numberline {3.6.}{\ignorespaces Classes diagram from \textit {genetic} package}}{31}{figure.3.6}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1.}{\ignorespaces CPU load during test run \#1}}{35}{figure.4.1}
-\contentsline {figure}{\numberline {4.2.}{\ignorespaces CPU load during test run \#2}}{35}{figure.4.2}
-\contentsline {figure}{\numberline {4.3.}{\ignorespaces Visualization of performance increase per available threads on Ubuntu machine}}{36}{figure.4.3}
-\contentsline {figure}{\numberline {4.4.}{\ignorespaces Visualization of performance increase per available threads on Windows machine}}{37}{figure.4.4}
-\contentsline {figure}{\numberline {4.5.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 2 }}{38}{figure.4.5}
-\contentsline {figure}{\numberline {4.6.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 4 }}{38}{figure.4.6}
-\contentsline {figure}{\numberline {4.7.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 8 }}{39}{figure.4.7}
-\contentsline {figure}{\numberline {4.8.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 16 }}{39}{figure.4.8}
-\contentsline {figure}{\numberline {4.9.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 32 }}{40}{figure.4.9}
+\contentsline {figure}{\numberline {5.1.}{\ignorespaces CPU load during test run \#1}}{34}{figure.5.1}
+\contentsline {figure}{\numberline {5.2.}{\ignorespaces CPU load during test run \#2}}{35}{figure.5.2}
+\contentsline {figure}{\numberline {5.3.}{\ignorespaces Visualization of performance increase per available threads on machine \#2}}{36}{figure.5.3}
+\contentsline {figure}{\numberline {5.4.}{\ignorespaces Visualization of performance increase per available threads on machine \#1}}{37}{figure.5.4}
+\contentsline {figure}{\numberline {5.5.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 2 }}{38}{figure.5.5}
+\contentsline {figure}{\numberline {5.6.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 4 }}{38}{figure.5.6}
+\contentsline {figure}{\numberline {5.7.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 8 }}{39}{figure.5.7}
+\contentsline {figure}{\numberline {5.8.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 16 }}{39}{figure.5.8}
+\contentsline {figure}{\numberline {5.9.}{\ignorespaces The CPU load while processing GA evolution limited by a thread pool with fixed size 32 }}{39}{figure.5.9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

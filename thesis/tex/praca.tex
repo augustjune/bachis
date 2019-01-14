@@ -1,4 +1,4 @@
-\documentclass[inzynier,druk]{dyplom}
+\documentclass[druk]{dyplom}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 %%
@@ -6,6 +6,7 @@
 \renewcommand{\appendixtocname}{Dodatki}
 \renewcommand{\appendixpagename}{Dodatki}
 \usepackage[english]{babel}
+%usepackage{titlesec}
 
 % pakiet do składu listingów w razie potrzeby można odblokować możliwość numerowania linii lub zmienić wielkość czcionki w listingu
 \usepackage{minted}
@@ -47,18 +48,18 @@ fontsize=\small,
 %\konsultant{dr hab. inż. Kazimerz Kabacki}
 \wydzial{Faculty of Computer Science and Management}
 \kierunek{Computer Science}
-\krotkiestreszczenie{This theses presents an optimization of genetic algorithms using parallelization and distributed computing, bounded in programming library.}
-\slowakluczowe{evolutionary algorithms, genetic algorithm, optimization, distributed computing, parallelization}
+\krotkiestreszczenie{This thesis presents an optimization of genetic algorithms using parallelization and distributed computing, bounded in programming library.}
+\slowakluczowe{evolutionary methods, genetic algorithm, optimization, distributed computing, parallelization}
 
 \begin{document}
 
-\maketitle
+%\maketitle
 
 \tableofcontents
 
 \listoffigures
 
-\listof{listing}{List of listings}
+\listof{listing}{List of Listings}
 
 \listoftables
 
@@ -66,27 +67,30 @@ fontsize=\small,
 
 % --- Strona ze streszczeniem i abstraktem ------------------------------------------------------------------
 
-\chapter*{Abstract}
+\chapter{Abstract}
 
-Nowadays artificial intelligence (AI) is gaining its popularity and changing more and more domains with its growth. Algorithms and heuristics are capable of some non-trivial things, that until recent time was known to be impossible for a machine. In some particular cases artificial intelligence methods perform tasks a lot better than a human being. However there are still a lot of uncovered domains, where AI is not yet as good as it could be.
+Nowadays artificial intelligence (AI) is gaining its popularity and changing more and more domains with its growth. Algorithms and heuristics are capable of some non-trivial things, that until the recent time was known to be impossible for a machine. In some particular cases, artificial intelligence methods perform tasks a lot better than a human being. However, there are still a lot of uncovered domains, where AI is not yet as good as it could be.
 
-Evolutionary algorithms is one of the families of metaheuristic optimization algorithms. It is subset of evolutionary computation, which was inspired by biological evolution. Its goal is to find the best solution for the given fitness function, which may be non-trivial and take over a lifetime to reach the same result by checking each possible solution.
+Evolutionary algorithms are one of the families of metaheuristic optimization algorithms. It is a subset of evolutionary computation, which was inspired by biological evolution. Its goal is to find the best solution for the given fitness function, which may be non-trivial and take over a lifetime to reach the same result by checking each possible solution.
 
-The theses addresses inconveniences regarding evolutionary algorithms and purposes solution introducing the concepts of parallelism and distributed computing. It notes the importance of evolutionary algorithms, and genetic algorithms in specific, and how it may be interesting for both scholars and professional developers. 
+The thesis addresses inconveniences regarding evolutionary algorithms and purposes solution introducing the concepts of parallelism and distributed computing. It notes the importance of evolutionary algorithms, and genetic algorithms in specific, and how it may be interesting for both scholars and professional developers. 
 
 % Kilka sztuczek, żeby:
 % - Abstract pojawił się na tej samej stronie co Streszczenie
 % - Abstract nie pojawił się w spisie treści
+\iffalse
 \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
 \begingroup
-\renewcommand{\cleardoublepage}{}
-\renewcommand{\clearpage}{}
-
-\input{abstract}
-
 \endgroup
 \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 % --- Koniec strony ze streszczeniem i abstraktem 
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
+\fi
+
+\input{abstract}
+
+
 -----------------------------------------------------------
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\cdot$}

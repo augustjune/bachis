@@ -11,7 +11,7 @@ The library artifact may be added into the project as dependency using maven too
 
 \bigbreak
 \subsection{API}
-Here is described the application programming interface of the library. Due to its specific type, the frameworks do not usually have use case diagram defined, but instead present its value through API. It is brief description of the classes and functions available to a user, in which they communicate and actually use a programming library.\footnote{Description of the rest of the classes was omitted due to its large size}
+Here is described the application programming interface of the library. Due to its specific type, the frameworks do not usually have use case diagram defined, but instead, present its value through API. It is a brief description of the classes and functions available to a user, in which they communicate and actually use a programming library.\footnote{Description of the rest of the classes was omitted due to its large size}
 
 \begin{itemize}
 
@@ -20,18 +20,18 @@ Here is described the application programming interface of the library. Due to i
 	\begin{itemize}
 		\item \texttt{def evolve[T: Fitness : Join : Modification](options: EvolutionOptions[T]): EvolutionFlow[Population[T]]}
 
-		Creates an evolution flow out of evolution options of type T, with available implicit objects of class Fitness[T], Join[T], Modification[T]
+		Creates an evolution flow out of evolution options of type T, with available implicit objects of class Fitness[T], Join[T], Modification[T].
 	\end{itemize}
 
 \smallskip
 \item \texttt{type EvolutionFlow[T] = akka.util.Source[T, NotUsed]}
 
-A type alias to akka-streams Source. Contains all the methods of akka.util.Source
+A type alias to akka-streams Source. Contains all the methods of akka.util.Source.
 
 \smallskip
 \item \texttt{trait EvolutionOptions[T]}
 
-A trait which holds the parameter for constructing evolution flow
+A trait which holds the parameter for constructing evolution flow.
 \begin{itemize}
 	\item \texttt{def initialPopulation: Population[T]}
 	\item \texttt{def operators: OperatorSet[T]}
@@ -40,7 +40,7 @@ A trait which holds the parameter for constructing evolution flow
 \smallskip
 \item \texttt{trait Evolution}
 
-Corresponds to the one step long evolution. Derives rated population to the new one using \texttt{class OperatorSet}
+Corresponds to the one step long evolution. Derives rated population to the new one using \texttt{class OperatorSet}.
 \begin{itemize}
 	\item \texttt{def nextGeneration[T: Join : Modification](ratedPop: Population[Rated[T]], operators: OperatorSet): Population[T]}
 \end{itemize}
@@ -58,11 +58,11 @@ A class which basing on the instance of Functor[Population[T]] computes the fitn
 \begin{itemize}
 	\item \texttt{def value(t: T): Double}
 	
-	Computes the fitness value for an individual of type \texttt{T}
+	Computes the fitness value for an individual of type \texttt{T}.
 
 	\item \texttt{def cached: CachedFitness[G]}
 
-	Returns a cached version of this fitness function
+	Returns a cached version of this fitness function.
 \end{itemize}
 
 \smallskip
@@ -70,7 +70,7 @@ A class which basing on the instance of Functor[Population[T]] computes the fitn
 \begin{itemize}
 	\item \texttt{def cross(a: T, b: T): IterablePair[T]}
 
-	Mixes a pair of individuals into new pair with shared genome
+	Mixes a pair of individuals into new pair with shared genome.
 \end{itemize}
 
 \smallskip
@@ -78,7 +78,7 @@ A class which basing on the instance of Functor[Population[T]] computes the fitn
 \begin{itemize}
 	\item \texttt{def modify(t: T): T}
 
-	Returns modified version of parameter \texttt{t}
+	Returns modified version of parameter \texttt{t}.
 \end{itemize}
 
 \smallskip
@@ -86,7 +86,7 @@ A class which basing on the instance of Functor[Population[T]] computes the fitn
 \begin{itemize}
 	\item \texttt{def create: T}
 
-	Creates a new instance of type \texttt{T}
+	Creates a new instance of type \texttt{T}.
 \end{itemize}
 
 \smallskip
@@ -94,11 +94,11 @@ A class which basing on the instance of Functor[Population[T]] computes the fitn
 \begin{itemize}
 	\item \texttt{def single[T](population: Population[Rated[T]]): (T, T)}
 
-	Selects a single pair from the Population of rated individuals 
+	Selects a single pair from the Population of rated individuals.
 
 	\item \texttt{def generation[T](population: Population[Rated[T]]): Population[(T, T)]}
 
-	Selects pairs of individuals into new population of the same size
+	Selects pairs of individuals into new population of the same size.
 \end{itemize}
 
 \smallskip
@@ -106,11 +106,11 @@ A class which basing on the instance of Functor[Population[T]] computes the fitn
 \begin{itemize}
 	\item \texttt{def single[T: Join](parents: (T, T)): IterablePair[T]}
 
-	Mixes one pair of individuals with provided \texttt{Join[T]} instance 
+	Mixes one pair of individuals with provided \texttt{Join[T]} instance.
 
 	\item \texttt{def generation[G: Join](population: Population[(G, G)]): Population[G]}
 
-	Mixes every pair of given population into the new population with provided \texttt{Join[T]} instance
+	Mixes every pair of given population into the new population with provided \texttt{Join[T]} instance.
 \end{itemize}
 
 \smallskip
@@ -118,11 +118,11 @@ A class which basing on the instance of Functor[Population[T]] computes the fitn
 \begin{itemize}
 	\item \texttt{def single[T: Modification](individual: T): T}
 
-	Mutates a single individual with the \texttt{Modification[T]} instance 
+	Mutates a single individual with the \texttt{Modification[T]} instance.
 
 	\item \texttt{def generation[T: Modification](population: Population[T]): Population[T]}
 
-	Mutates all population with the \texttt{Modification[T]} instance
+	Mutates all population with the \texttt{Modification[T]} instance.
 \end{itemize}
 
 \end{itemize}

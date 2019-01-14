@@ -678,8 +678,8 @@ Field of study: \@kierunek
 \end{flushleft}
 \begin{minipage}[t][0.46\textheight]{\textwidth}
 \begin{center}
-\large Bachelor Thesis -- %
-\if@inzynier inżynierska \fi%
+\large Bachelor Thesis %
+%\if@inzynier inżynierska \fi%
 \if@magister magisterska \fi \\
 \vspace{0cm plus .5fill}
 \StrLen{\@title}[\tytuldlugosc]
@@ -814,7 +814,7 @@ For the purposes of archival thesis qualified to:*
 \end{flushright}
 \vspace{0cm}
 \begin{center}
-\large Wrocław, rok \the\year
+\large Wrocław, year \the\year
 \end{center}
 \end{minipage}
 \end{flushleft}

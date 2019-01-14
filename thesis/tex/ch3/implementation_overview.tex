@@ -1,6 +1,6 @@
 \section{Implementation overview}
 
-The solution is presented as an open-source library, that provides the major part of genetic algorithm implementation, which can be shared between different application. Base algorithm consist of a pipeline separated by three stages: selection, crossover and mutation, which evolves the population of individuals, increasing average level of adjustment and finding the best individual according to provided fitness function; preimplemented most popular strategies of genetic selection, crossover and mutation, with possibility of extending with the additional ones for specific reasons and a set of platforms which allow to run the pipeline in a different ways, best suited for existing hardware. The library is supplied with key features, basing on the concepts described earlier, wrapping all the components into sufficient framework.
+The solution is presented as an open-source library, that provides a major part of genetic algorithm implementation, which can be shared between different application. Base algorithm consists of a pipeline separated by three stages: selection, crossover and mutation, which evolves the population of individuals, increasing average level of adjustment and finding the best individual according to provided fitness function; pre-implemented most popular strategies of genetic selection, crossover and mutation, with possibility of extending with the additional ones for specific reasons and a set of platforms which allow to run the pipeline in a different ways, best suited for existing hardware. The library is supplied with key features, basing on the concepts described earlier, wrapping all the components into a self-sufficient library.
 
 \subsection{Technology stack}
 
@@ -10,21 +10,21 @@ Scala is a modern multi-paradigm programming language designed to express common
 Scala is easy to get into. It runs on the standard Java platform and interoperates seamlessly with all Java libraries. It's quite a good language for writing scripts that pull together Java components. But it can apply its strengths even more when used for building large systems and frameworks of reusable components. \cite{programming_in_scala}
 
 Technically, Scala is a blend of object-oriented and functional programming concepts in a statically typed language. The fusion of object-oriented and functional programming shows up in many different aspects of Scala; it is probably more pervasive than in any other widely used language. The two programming styles have complementary strengths when it comes to scalability. Scala's functional programming constructs make it easy to build interesting things quickly from simple parts. Its object-oriented constructs make it easy to structure larger systems and adapt them to new demands. The combination of both styles in ScaalMatei Zaharia, “Spark: Cluster Computing with Working Sets
- makes it possible to express new kinds of programming patterns and component abstractions. It also leads to a legible and concise programming style \cite{programming_in_scala}
+ makes it possible to express new kinds of programming patterns and component abstractions. It also leads to a legible and concise programming style. \cite{programming_in_scala}
 
 % May be expanded with definitions from books
 
-Due to its programming style and variety of features Scala serves a great tool for developing this library. A combination of paradigms is extremely useful in this case and was crucial during selection of programming language. Both of the programming styles were heavily used in order to gain the best possible result:
+Due to its programming style and variety of features, Scala serves a great tool for developing this library. A combination of paradigms is extremely useful in this case and was crucial during the selection of programming language. Both of the programming styles were heavily used in order to gain the best possible result:
 \begin{itemize}
 \item
-Object-oriented style
+Object-oriented paradigm
 
-Scala is an object-oriented language in pure form: every value is an object and every operation is a method call. \cite{programming_in_scala} It provides modularity and maintainability: all application is split into a self-sufficient containers, which store the relevant data and provide available operations, that may be performed on its data. These containers may be used as the assembling parts for another container, passed as function parameter and returned as function result. Such approach allows to keep track of the growing codebase, aligning its components into domain hierarchies and letting its parts to communicate with one another.
+Scala is an object-oriented language in pure form: every value is an object and every operation is a method call \cite{programming_in_scala}. It provides modularity and maintainability: all application is split into self-sufficient containers, which store the relevant data and provide available operations, that may be performed on its data. These containers may be used as the assembling parts for another container, passed as a function parameter and returned as the function result. Such approach allows to keep track of the growing codebase, aligning its components into domain hierarchies and letting its parts to communicate with one another.
 
 \item
-Functional style
+Functional paradigm
 
-Functional programming provides expressiveness, composability and conciseness. Building the library with mathematical-like functions makes it more understandable, replacing the mutable state from the application. As the result, it becomes clear, unequivocal and may be safely used in multi-thread environment. One of the most important assets, which comes from functional programming, is scalability. A well constructed application may easily be enlarged for user needs to handle a growing amount of work; it is more adaptive to the changing needs and the performance of such system improves proportionally to the additional hardware.
+Functional programming provides expressiveness and conciseness. Building the library with mathematical-like functions makes it more understandable, replacing the mutable state from the application. As the result, it becomes clear, unequivocal and may be safely used in multi-thread environment. One of the most important assets, which comes from functional programming, is scalability. A well-constructed application may easily be enlarged for user needs to handle a growing amount of work; it is more adaptive to the changing needs and the performance of such a system improves proportionally to the additional hardware.
 
 \end{itemize} 
 
@@ -32,28 +32,29 @@ Functional programming provides expressiveness, composability and conciseness. B
 
  Encouraging usage of immutable objects, from version 2.8 Scala provides new collection API, which contains parallel collections package as part of it. Parallel collections were included in the Scala standard library in an effort to facilitate parallel programming by sparing users from low-level parallelization details, meanwhile providing them with a familiar and simple high-level abstraction. The idea is simple– collections are a well-understood and frequently-used programming abstraction. And given their regularity, they’re able to be efficiently parallelized, transparently. By allowing a user to “swap out” sequential collections for ones that are operated on in parallel, Scala’s parallel collections take a large step forward in enabling parallelism to be easily brought into more code. \cite{scala_parallel_collections_overview}
 
- How parallel collections are built?
- What may be acquired with Scala parallel collections?
+%ToDo
+ %How parallel collections are built?
+ %What may be acquired with Scala parallel collections?
 
 
 \subsubsection{Apache Spark}
 
 Apache Spark is a high-performance, general-purpose distributed computing system that has become the most active Apache open source project, with more than 1,000 active contributors. Spark enables users to process large quantities of data, beyond what can fit on a single machine, with a high-level, relatively easy-to-use API. Spark’s design and interface are unique, and it is one of the fastest systems of its kind. Uniquely, Spark allows to write the logic of data transformations and machine learning algorithms in a way that is parallelizable, but relatively system agnostic. So it is often possible to write computations that are fast for distributed storage systems of varying kind and size.
 
-On the generality side, Spark is designed to cover a wide range of workloads that previously required separate distributed systems, including batch applications, iterative algorithms, interactive queries, and streaming. By supporting these workloads in the same engine, Spark makes it easy and inexpensive to combine different processing types, which is often necessary in production data analysis pipelines.\cite{learning_spark}
+On the generality side, Spark is designed to cover a wide range of workloads that previously required separate distributed systems, including batch applications, iterative algorithms, interactive queries, and streaming. By supporting these workloads in the same engine, Spark makes it easy and inexpensive to combine different processing types, which is often necessary in production data analysis pipelines \cite{learning_spark}.
 
-Spark can run over a variety of cluster managers to access the machines in a cluster. The easiest way is to run Spark by itself on a set of machines. For this purpose Spark comes with built-in Standalone mode. Spark’s Standalone manager offers a simple way to run applications on a cluster. It consists of a master and multiple workers, each with a configured amount of memory and CPU cores. When application is submitted, one can choose how much memory its executors will use, as well as the total number of cores across all executors.
+Spark can run over a variety of cluster managers to access the machines in a cluster. The easiest way is to run Spark by itself on a set of machines. For this purpose, Spark comes with built-in Standalone mode. Spark’s Standalone manager offers a simple way to run applications on a cluster. It consists of a master and multiple workers, each with a configured amount of memory and CPU cores. When the application is submitted, one can choose how much memory its executors will use, as well as the total number of cores across all executors.
 
 Spark Core contains the basic functionality of Spark, including components for task scheduling, memory management, fault recovery, interacting with storage systems, and more. Spark Core is also home to the API that defines resilient distributed data‐sets (RDDs), which are Spark’s main programming abstraction. RDDs represent a collection of items distributed across many compute nodes that can be manipulated in parallel. Spark Core provides many APIs for building and manipulating these collections. RDDs offer two types of operations: transformations and actions. Transformations construct a new RDD from a previous one. For example, one common transformation is filtering data that matches a predicate. Actions are operations, which produce different result than the transformation, like collecting the elements into a local collection on master node or counting the number of elements in RDD. Transformations and actions are different because of the way Spark computes RDDs. Although new RDDs can be defined in any time, Spark computes them only in a lazy fashion — that is, the first time they are used in an action. The transformations, on the other hand, are scheduled to a DAG (directed acyclic graph) of computations. This approach has a lot of advantages, among them: effective fault tolerance and ability to make a lot of optimization decisions before actually running operations. This would not be possible if it executed computations as soon as it got it.
 
-In distributed mode, Spark uses a master/slave architecture with one central coordinator and many distributed workers. The central coordinator is called the driver. The driver communicates with a potentially large number of distributed workers called executors. The driver runs in its own Java process and each executor is a separate Java process. A driver and its executors are together termed a Spark application. Then a Spark application is launched on a set of machines using early described cluster manager.
+In distributed mode, Spark uses a master/slave architecture with one central coordinator and many distributed workers. The central coordinator is called the driver. The driver communicates with a potentially large number of distributed workers called executors. The driver runs in its own Java process and each executor is a separate Java process. A driver and its executors have together termed a Spark application. Then a Spark application is launched on a set of machines using early described cluster manager.
 
 \begin{figure}
 \centering\includegraphics[width=.6\textwidth]{img/spark-runtime-split}
 \caption{ The components of a distributed Spark application \cite{learning_spark}.}  \label{img:spark-components}
 \end{figure}
 
-This architectures allows to distribute the data between different executor nodes and perform operations on it locally until the shuffling is needed. Only then the data is shared between different nodes and the network communication is handled. In a distributed program, communication is very expensive, so laying out data to minimize network traffic can greatly improve performance. Much like how a single-node program needs to choose the right data structure for a collection of records, Spark programs can choose to control their RDDs’ partitioning to reduce communication.
+This architecture allows to distribute the data between different executor nodes and perform operations on it locally until the shuffling is needed. Only then the data is shared between different nodes and the network communication is handled. In a distributed program, communication is very expensive, so laying out data to minimize network traffic can greatly improve performance. Much like how a single-node program needs to choose the right data structure for a collection of records, Spark programs can choose to control their RDDs’ partitioning to reduce communication.
 
 \begin{figure}
 \centering \includegraphics[width=.9\textwidth]{img/spark_persistence_levels}
@@ -65,39 +66,39 @@ In order to be able to transforms large sets of data without redundant re-comput
 
 \subsubsection{Akka Streams}
 
-Akka Streams is a library to process and transfer a sequence of elements using bounded buffer space. This latter property is what is usually referred as boundedness and it is the defining feature of Akka Streams. Translated to everyday terms it is possible to express a chain of processing entities, each executing independently (and possibly concurrently) from the others while only buffering a limited number of elements at any given time. 
+Akka Streams is a library to process and transfer a sequence of elements using bounded buffer space. This latter property is what is usually referred to as boundless and it is the defining feature of Akka Streams. Translated to everyday terms it is possible to express a chain of processing entities, each executing independently (and possibly concurrently) from the others while only buffering a limited number of elements at any given time. 
 
-The purpose is to offer an intuitive and safe way to formulate stream processing setups such that they may be executed efficiently later and with bounded resource usage. In order to achieve this  streams need to be able to limit the buffering that they employ, they need to be able to slow down producers if the consumers cannot keep up. This feature is called back-pressure and is at the core of the Reactive Streams initiative of which Akka is a founding member.
+The purpose is to offer an intuitive and safe way to formulate stream processing setups such that they may be executed efficiently later and with bounded resource usage. In order to achieve this, streams need to be able to limit the buffering that they employ and slow down producers if the consumers cannot keep up. This feature is called back-pressure and is at the core of the Reactive Streams initiative of which Akka is a founding member.
 
 Unlike heavier “streaming data processing” frameworks, Akka Streams are not “deployed” nor automatically distributed. Akka stream refs are, as the name implies, references to existing parts of a stream, and can be used to create a distributed processing framework or introduce such capabilities in specific parts of your application.
 
 Stream refs are well suited for any system in which you need to send messages between nodes and need to do so in a flow-controlled fashion. Typical examples include sending work requests to worker nodes, as fast as possible, but not faster than the worker node can process them, or sending data elements which the downstream may be slow at processing. \cite{stream_refs}
 
-Using reactive streams the first limitation of the pipeline is downstream, which implicitly asks upstreams for the data. With this in mind the upstream can be unbounded by the definition and emit data as long as there is someone, who is interested in it. If there is no one asking for new commits the stream remains inactive without resources consumption. 
+Using reactive streams the first limitation of the pipeline is downstream, which implicitly asks upstream for the data. With this in mind, the upstream can be unbounded by the definition and emit data as long as there is someone, who is interested in it. If there is no one asking for new commits the stream remains inactive without resources consumption. 
 
-This is a great candidate for representation an evolution flow in genetic algorithms as primarily it is unlimited, but may paused, slowed or stopped in any given moment, basing on some external data (like time or number of iterations) or state of the stream itself (the data it is committing).
+This is a great candidate for representation an evolution flow in genetic algorithms as primarily it is unlimited, but may be paused, slowed or stopped in any given moment, basing on some external data (like time or number of iterations) or state of the stream itself (the data it is committing).
 
 \subsection{Development tools}
-For convenient and easier application development process, basing on personal experience and conducted research a list of software development tool were chosen to be used during the implementation of thesis application.
+For convenient and easier application development process, based on personal experience and conducted research a list of software development tool was chosen to be used during the implementation of thesis application.
 
 \begin{itemize}
 \item Intellij IDEA
 
-Popular integrated development environment (IDE) provided by JetBrains inc. originally designed for Java projects. With its popularity growth and open for user created plugins architecture, there was added support for other mainstream languages like Scala, Python etc. This is professional development tool, so it also provides built-in support for integration with other tools, like a number of version-control systems (VCS), building tools, automatic JavaDoc generation tools, static code analysis tools and many others. Using this IDE provides the whole ecosystem of development tools and practices. 
+Popular integrated development environment (IDE) provided by JetBrains inc. originally designed for Java projects. With its popularity growth and open for user created plugins architecture, there was added support for other mainstream languages like Scala, Python etc. This is a professional development tool, so it also provides built-in support for integration with other tools, like a number of version-control systems (VCS), building tools, automatic JavaDoc generation tools, static code analysis tools, and many others. Using this IDE provides the whole ecosystem of development tools and practices. 
 
-For the purpose of thesis application development Intellij IDEA Ultimate version was used, provided for free by student support license.
+For the purpose of thesis application development, IntelliJ IDEA Ultimate version was used, provided for free by student support license.
 \smallskip
 
 \item Git
 
-Version-control system for tracking changes in source code and file system itself used by the large group of software developers. This is free and open-source tool, providing a wide range of features, like cheap local branching, convenient staging areas and multiple workflows. This tool helped to keep different versions of application in comfortable and convenient way. 
+Version-control system for tracking changes in source code and file system itself used by the large group of software developers. This is free and open-source tool, providing a wide range of features, like cheap local branching, convenient staging areas, and multiple workflows. This tool helped to keep different versions of an application in a comfortable and convenient way.
 
-For the whole stage of developing there were two main branches: \texttt{master} and \texttt{dev}. Master branch was used for stable releases of application keeping the quality of the product on high level. Developing branch was used for improving the system by implementing new functionalities and was periodically merged to master branch. For the purpose of implementing each feature or task, new branch with corresponding name was created and merged to development branch after its finish.
+For the whole stage of developing there were two main branches: \texttt{master} and \texttt{dev}. Master branch was used for stable releases of application keeping the quality of the product on a high level. Developing branch was used for improving the system by implementing new functionalities and was periodically merged to master branch. For the purpose of implementing each feature or task, new branch with the corresponding name was created and merged to development branch after its finish.
 \smallskip
 
 \item ScalaStyle
 
-Scala static code analysis tool for code examination and detecting potential problems. With predefined list of rules the code is analyzed and every violation is reported. There is Intellij IDEA plugin for integration ScalaStyle into IDE. This tool covers issues ranging from code style to best practices and helps to keep the codebase in sustainable state. Here a few examples of ScalaStyle rules:
+Scala static code analysis tool for code examination and detecting potential problems. With predefined list of rules the code is analyzed and every violation is reported. There is IntelliJ IDEA plugin for integration ScalaStyle into IDE. This tool covers issues ranging from code style to best practices and helps to keep the codebase in sustainable state. Here a few examples of ScalaStyle rules:
 \begin{itemize}
 \item Checks that null is not used
 \item Checks that return is not used
@@ -113,16 +114,16 @@ A full list of rules contains over 60 positions with support for custom rules cr
 
 \item GitHub
 
-A platform for software developers, for hosting, sharing and developing user projects using Git. After last releases it also provides reach support for project management, with such features as issues tracking, managing pull request, milestones, project boards, repository wiki page, etc. With this set of tools  gather in one place, GitHub opens as a decent project management platform.
+A platform for software developers, for hosting, sharing and developing user projects using Git. After last releases, it also provides reach support for project management, with such features as issues tracking, managing pull request, milestones, project boards, repository wiki page, etc. With this set of tools gather in one place, GitHub opens as a decent project management platform.
 
-For more advantageous experience GitHub Student Developer Pack was used, allowing to use private repositories and number of additional applications for project developing for free.
+For more advantageous experience GitHub Student Developer Pack was used, allowing to use private repositories and number of additional applications for project development for free.
 \smallskip
 
 \item DigitalOcean
 
-A cloud application platform for application deployment and management. This tool will be used for hosting Droplets (virtual machines), which will form a computational cluster for application testing in distributed environment. DigitalOcean provides easy and simple one-click application deployments on its multiple Droplets available worldwide. It provides a range of different hardware solutions, including lightweight, basic and optimized machines, which may be chosen depending on resources needs.
+A cloud application platform for application deployment and management. This tool will be used for hosting Droplets (virtual machines), which will form a computational cluster for application testing in a distributed environment. DigitalOcean provides easy and simple one-click application deployments on its multiple Droplets available worldwide. It provides a range of different hardware solutions, including lightweight, basic and optimized machines, which may be chosen depending on resources needs.
 
-This platform does not provide free computation nodes, with starting price of \textdollar5/month for the smallest droplet. However, a coupon for \textdollar50 in platform credit may be accessed as part of GitHub Student Developer Pack.
+This platform does not provide free computation nodes, with a starting price of \textdollar5/month for the smallest droplet. However, a coupon for \textdollar50 in platform credit may be accessed as part of GitHub Student Developer Pack.
 \smallskip
 
 \item Spark Web UI
@@ -132,24 +133,24 @@ Spark Web UI is the web interface of a Spark application to monitor and inspect 
 
 \item Databricks
 
-Databricks is a unified analytics platform, from original creators of Apache Spark. It allows to construct, execute and test Spark lifecycles in web-page design. It is a comprehensive tool for learning and working with Apache Spark, as it does not require any installation of heavy Spark packages on the user side.
+Databricks is a unified analytics platform, from original creators of Apache Spark. It allows to construct, execute and test Spark life cycles in web-page design. It is a comprehensive tool for learning and working with Apache Spark, as it does not require any installation of heavy Spark packages on the user side.
 \smallskip
 
 \item Resource monitoring tools
-Depending on the operation system one of resource monitoring tools was used. The list of tested operating systems contains Windows 10, Ubuntu Desktop 18.04, Ubuntu Server 18.04.
+Depending on the operating system one of resource monitoring tools was used. The list of tested operating systems contains Windows 10, Ubuntu Desktop 18.04, Ubuntu Server 18.04.
 \smallskip 
 \end{itemize}
 
 \subsection{Core components}
 
-This is a list of core components of demonstrated solution. It contains also a description of what is the purpose of the component and how it is implemented. All of the functional requirements are fulfilled in terms of these components.
+This is a list of core components of the demonstrated solution. It contains also a description of what is the purpose of the component and how it is implemented. All of the functional requirements are fulfilled in terms of these components.
 
 \begin{itemize}
 
 \item
 Individual
 
-An individual is a core component of genetic algorithm, often also referred to as a \textit{genotype, chromosome \emph{or} a candidate}, which represents a candidate solution to a given problem. The number of individuals are evolved during the algorithm workflow, mixed and mutated in order to find the fittest one according to provided fitness function. This concept is purely abstract in the library, encoded as a generic type which may have an arbitrary representation defined by users depending on their needs. 
+An individual is a core component of a genetic algorithm, often also referred to as a \textit{genotype, chromosome \emph{or} a candidate}, which represents a candidate solution to a given problem. The number of individuals are evolved during the algorithm workflow, mixed and mutated in order to find the fittest one according to provided fitness function. This concept is purely abstract in the library, encoded as a generic type which may have an arbitrary representation defined by users depending on their needs. 
 
 In order to handle an individual through the process of evolution there should be defined a set of operators, where each encapsulates logic of some part of evolution procedure. 
 
@@ -160,7 +161,7 @@ Each operation is implemented as a \textbf{type class}. A type class is a type s
 \item
 Fitness
 
-Fitness is a type class which represents a function of type \texttt{I => Double}, where \texttt{I} is type of individual. This function summarizes how close a given design solution is to achieving the set aims. A fitness function must be devised for each problem to be solved, thus should be provided by the user and may not be preimplemented. Fitness function value is main criterion of future selection and is very important attribute of individual representation.
+Fitness is a type class which represents a function of type \texttt{I => Double}, where \texttt{I} is type of individual. This function summarizes how close a given design solution is to achieving the set aims. A fitness function must be devised for each problem to be solved, thus should be provided by the user and may not be pre-implemented. Fitness function value is main criterion of future selection and is very important attribute of individual representation.
 
 Very often genetic algorithm's computational complexity heavily depends on fitness function evaluation. This may be the bottleneck of the algorithm and thus a lot of effort is usually taken to optimize this function. Parallelization is one of the solutions to decrease computation time.
 \medbreak	
@@ -208,7 +209,7 @@ Scheme
 Scheme is a type class, which is responsible for a creation of new individual. This is additional function, which may be replaced by predefined initial population during the start of evolution process, but still offers more functionality and may be used when individuals are created randomly, from limitless iterator, smaller collection, which should be cycled or even single instance of individual. This concept is implemented as a covariant class, so the scheme object of parent class may be replaced by the scheme object of child class. It allows to easily use this class with hierarchies, avoiding redundant code. 
 \end{itemize} 
 
-\smallskip \textit{Together this satisfies predefined functional requirement \ref{freq:generic}}
+\smallskip \textit{Together this satisfies predefined functional requirement \ref{freq:generic}}.
 
 \medbreak
 
@@ -229,7 +230,7 @@ Evolution environment is a component, which taking the set of options constructs
 Local environment
 
 This type of environment presumes local evolution of evolution flow. It is the richest environments in terms of possible configurations. The logic, behind the strategy of applying genetic operators and evaluating fitness values is decoupled from one another into instances of \texttt{EvolutionCompanion} and \texttt{FitnessEvaluator} classes respectively. For each of the strategies the are sequential and parallel versions, with additional fitness caching option for repetitive individuals within population. Any fitness evaluation strategy may combined with any possible technique of applying genetic operators, creating a number of possibilities ready for use.
-\smallskip\textit{This satisfies predefined functional requirement \ref{freq:par}}
+\smallskip\textit{This satisfies predefined functional requirement \ref{freq:par}}.
 \medbreak
 
 \item[--]
@@ -237,7 +238,7 @@ Asynchronous environment
 
 Asynchronous environment delegates the function of fitness evaluation to another system, by sending non-blocking asynchronous calls for every element of the population. It may be extremely useful for the problems with heavy fitness functions. This approach allows to compute fitness values on different machine or even cluster of machines, as well as using different low-level programming language or some specific optimization, with no need to switch the entire application to another platform. This type of environment also fits perfectly to cloud computing solutions, as fitness evaluation is entirely isolated from the rest of application. However, applying genetic operators in same way needs to send a lot more data over the network, which negates the benefits one can gain from this approach. For this reason, genetic operators are applied locally with any of the strategies described earlier.
 
-\smallskip \textit{This satisfies predefined functional requirement \ref{freq:async}}
+\smallskip \textit{This satisfies predefined functional requirement \ref{freq:async}}.
 
 \medbreak
 
@@ -246,7 +247,7 @@ Distributed environment
 
 Distributed environment is very different from the previous options. Here the evolution is performed on the population in terms of Spark RDD, distributed over the cluster. Each of the executors works on its part of the data, which increases overall performance. This technique enables processing of very large population, since it is split between many executor nodes. Once the evolution step is done executors shuffle the data between each other in order to perform selection of individuals for the next population and continue working on the local values. It minimizes the network communication, which may be a bottle-neck in such applications. 
 
-\smallskip\textit{This satisfies predefined functional requirement \ref{freq:distributed}}
+\smallskip\textit{This satisfies predefined functional requirement \ref{freq:distributed}}.
 
 \end{itemize}
 \medbreak
@@ -256,7 +257,7 @@ Evolution flow
 
 Evolution flow represents the endless evolution process of given population. It is implemented as the reactive stream with one output, which may be plugged in into further part of pipeline or executed standalone. During running, evolution flow emits the instance of population once it is computed and starts working on the next one. Since it is a reactive stream, the process of evolution is continued during there is a demand from the downstream. For example, if the sink of pipeline needs to take only 50 first populations, no more than 50 will be computed. This technique allows to leave the variety of possible stop conditions to the end user, including number of elements pushed from the flow, total time, idle time since the last push or any predicate based on the last produced population(s). 
 
-\smallskip\textit{This satisfies predefined functional requirements \ref{freq:stop}, \ref{freq:on-demand}, \ref{freq:best}}
+\smallskip\textit{This satisfies predefined functional requirements \ref{freq:stop}, \ref{freq:on-demand}, \ref{freq:best}}.
 
 \medbreak
 
@@ -264,7 +265,7 @@ Evolution flow represents the endless evolution process of given population. It 
 
 Fitness caching is implemented using decorator design pattern over the provided fitness function. It supports every fitness function provided by user, as it simply holds the record over the ranked individuals and returns stored result if it was encountered earlier. The data structure used for holding cached values is concurrent hash trie. It guarantees consistency in multi-threaded environment, enabling safe usage with parallel workflows. From the performance side, concurrent hash tries allow to lookup element in logarithmic time, with constant snapshot time \cite{hash_tries} (operation which is performed when two or more threads try to modify the same element).
 
-\smallskip\textit{This satisfies predefined functional requirement \ref{freq:cache}}
+\smallskip\textit{This satisfies predefined functional requirement \ref{freq:cache}}.
  
 \medbreak
 
@@ -295,7 +296,7 @@ The whole project is divided into three main packages:
 
 \textit{engines} package contains the heavy part of genetic algorithm implementation. Here one may find EvolutionEnvironment class and its concrete implementations. Every child class (parallel implementation) is placed in its specific subpage, so users have to import only the part, which they are interested in or everything, if this is desired. This approach may be seen in project structure \ref{diag:project-structure}, where the interfaces, which are communicating between each other are placed at the top of the package and different variants of their implementation are placed into specific sub-package, which later is important for user needs.
 
-\smallskip\textit{This satisfies predefined non-functional requirement \ref{nfreq:modul}}
+\smallskip\textit{This satisfies predefined non-functional requirement \ref{nfreq:modul}}.
 
 \begin{figure}
 \includegraphics[width=.7\textwidth]{img/diagrams/alleles-project-structure}
@@ -303,7 +304,7 @@ The whole project is divided into three main packages:
 \end{figure}
 
 \medbreak
-The way in which parts of \textit{engines} package are related to each other may be observed in \textit{genetic} class diagram\ref{diag:genetic-classes}
+The way in which parts of \textit{engines} package are related to each other may be observed in \textit{genetic} class diagram \ref{diag:genetic-classes}.
 
 \begin{figure}
 \centering\includegraphics[width=1.\textwidth]{img/diagrams/alleles-genetic-class}
