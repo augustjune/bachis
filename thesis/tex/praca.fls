@@ -283,16 +283,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/catchfile.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/catchfile.sty
 INPUT /dev/null
-INPUT /home/jura/Projects/jslinkin/bachis/thesis/tex/praca.w18
-INPUT /home/jura/Projects/jslinkin/bachis/thesis/tex/praca.w18
 INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
-INPUT /home/jura/Projects/jslinkin/bachis/thesis/tex/praca.aex
-INPUT /home/jura/Projects/jslinkin/bachis/thesis/tex/praca.aex
 INPUT /home/jura/Projects/jslinkin/bachis/thesis/tex/praca.aux
 INPUT /home/jura/Projects/jslinkin/bachis/thesis/tex/praca.aux
 OUTPUT /home/jura/Projects/jslinkin/bachis/thesis/tex/praca.aux
